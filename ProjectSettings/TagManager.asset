@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Shield
   - Factory
+  - Enemy
   layers:
   - Default
   - TransparentFX
