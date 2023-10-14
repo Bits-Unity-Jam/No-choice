@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Game.Energy.Booster
 {
@@ -11,7 +12,10 @@ namespace Game.Energy.Booster
 
         private bool isActivate = false;
         private const string PLAYER = "Factory";
-        
+
+        [SerializeField]
+        private UnityEvent onDestroy;
+
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag(PLAYER))
@@ -20,18 +24,13 @@ namespace Game.Energy.Booster
                 {
                     isActivate = true;
                     EnergyController.Instance.ChangeEnergy(countEnergy, EnergyOperation.Add);
-                    
-                    StartCoroutine(DestroyObject());
+
+                    onDestroy.Invoke();
                 }
                 
             }
         }
-        
-        private IEnumerator DestroyObject()
-        {
-            yield return new WaitForSeconds(0f);
-            Destroy(this.gameObject); 
-        }
+
     }
 }
 
