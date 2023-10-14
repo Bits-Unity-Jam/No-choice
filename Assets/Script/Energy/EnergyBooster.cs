@@ -10,15 +10,15 @@ namespace Game.Energy.Booster
         private float countEnergy;
 
         private bool isActivate = false;
-        private const string PLAYER = "Player";
+        private const string PLAYER = "Factory";
         
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag(PLAYER))
             {
-                if (isActivate)
+                if (!isActivate)
                 {
-                    Debug.Log("LOG!");
+                    isActivate = true;
                     EnergyController.Instance.ChangeEnergy(countEnergy, EnergyOperation.Add);
                     
                     StartCoroutine(DestroyObject());
