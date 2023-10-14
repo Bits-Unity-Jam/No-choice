@@ -31,8 +31,8 @@ public class ChunkPlacingService : MonoBehaviour
     private float _lastChunkHigh;
     [SerializeField]
     private int _lastChunkIndex;
+    private int _previousChunkIndex;
 
-   
     private void OnValidate()
     {
         if (maximumChunkRange < minimumChunkRange) maximumChunkRange = minimumChunkRange;
@@ -56,7 +56,15 @@ public class ChunkPlacingService : MonoBehaviour
         _generatedkDistanceToNextChunk = GenerateDistanceToNextChunk();
         _lastChunkHigh = _nextChunkHigh;
         _nextChunkHigh += _generatedkDistanceToNextChunk;
-        _lastChunkIndex = GenerateChunkIndex();
+
+
+        do
+        {
+            _lastChunkIndex = GenerateChunkIndex();
+        }
+        while (_previousChunkIndex == _lastChunkIndex);
+
+        _previousChunkIndex = _lastChunkIndex;
 
         _chunkBehaviours[_lastChunkIndex].
             PlaceAtHighRelateOrigin((_placingOriginPosition.position + _placingOffset), _generatedkDistanceToNextChunk);

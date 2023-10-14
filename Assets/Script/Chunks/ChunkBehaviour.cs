@@ -18,6 +18,7 @@ namespace Assets.Script.Chunks
 
         public void ResetInitialState()
         {
+            gameObject.SetActive(true);
             chunkMembers.ForEach(member => member.ResetState());
         }
 
