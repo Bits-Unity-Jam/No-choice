@@ -41,7 +41,22 @@ namespace Assets.Script.Chunks
         {
             transform.localRotation = ActiveChunkMemberData.InitLocalRotation;
             transform.localPosition = ActiveChunkMemberData.InitLocalPosition;
+            ActiveChunkMemberData.MemberRb.velocity = default;
             ActiveChunkMemberData.MemberRb.Sleep();
+            ActiveChunkMemberData.MemberRb.isKinematic = true;
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+
+            ActiveChunkMemberData.MemberRb.isKinematic = false;
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+
+
+            ActiveChunkMemberData.MemberRb.isKinematic = false;
         }
     }
 }

@@ -23,28 +23,43 @@ public class ChunkPlacingService : MonoBehaviour
     [SerializeField]
     private float maximumChunkRange;
 
+    [SerializeField]
     private float _generatedkDistanceToNextChunk;
+    [SerializeField]
     private float _nextChunkHigh;
+    [SerializeField]
     private float _lastChunkHigh;
+    [SerializeField]
     private int _lastChunkIndex;
 
+   
     private void OnValidate()
     {
         if (maximumChunkRange < minimumChunkRange) maximumChunkRange = minimumChunkRange;
     }
 
+    private void Start()
+    {
+        CreateConfigForNextChunk();
+    }
+
     private void Update()
     {
-        if(_nextChunkHigh - _lastChunkHigh > _generatedkDistanceToNextChunk)
+        if(_placingOriginPosition.position.y - _lastChunkHigh > _generatedkDistanceToNextChunk)
         {
-            _lastChunkHigh = _generatedkDistanceToNextChunk;
-
-            _lastChunkIndex = GenerateChunkIndex();
-            _generatedkDistanceToNextChunk = GenerateDistanceToNextChunk();
-
-            _chunkBehaviours[_lastChunkIndex].PlaceAtHighRelateOrigin(_placingOriginPosition.position, _generatedkDistanceToNextChunk);
+            CreateConfigForNextChunk();
         }
+    }
 
+    private void CreateConfigForNextChunk()
+    {
+        _generatedkDistanceToNextChunk = GenerateDistanceToNextChunk();
+        _lastChunkHigh = _nextChunkHigh;
+        _nextChunkHigh += _generatedkDistanceToNextChunk;
+        _lastChunkIndex = GenerateChunkIndex();
+
+        _chunkBehaviours[_lastChunkIndex].
+            PlaceAtHighRelateOrigin((_placingOriginPosition.position + _placingOffset), _generatedkDistanceToNextChunk);
     }
 
     private int GenerateChunkIndex() => Random.Range(0, _chunkBehaviours.Count);

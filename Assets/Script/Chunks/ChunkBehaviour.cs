@@ -9,9 +9,6 @@ namespace Assets.Script.Chunks
     public class ChunkBehaviour : MonoBehaviour
     {
         [SerializeField]
-        private List<ChunkMemberData> _chunks;
-
-        [SerializeField]
         private List<ChunkMember> chunkMembers;
 
         private void OnValidate()
@@ -26,6 +23,7 @@ namespace Assets.Script.Chunks
 
         public void PlaceAtHighRelateOrigin(Vector3 originPosition, float generatedkDistanceToNextChunk)
         {
+            ResetInitialState();
             transform.position = new Vector3(originPosition.x,
                 originPosition.y + generatedkDistanceToNextChunk, originPosition.z);
         }
