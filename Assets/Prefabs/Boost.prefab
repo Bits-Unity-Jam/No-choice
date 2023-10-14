@@ -42,18 +42,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1659573556321378395, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
       propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1659573556321378395, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
       propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1659573556321378395, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
+      propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659573556321378395, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
       propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4578887363872306248}
     - target: {fileID: 1659573556321378395, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
+      propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4851426050968314954}
+    - target: {fileID: 1659573556321378395, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
       propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659573556321378395, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
+      propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1659573556321378395, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
@@ -61,11 +73,23 @@ PrefabInstance:
       value: Scale
       objectReference: {fileID: 0}
     - target: {fileID: 1659573556321378395, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
+      propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659573556321378395, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
       propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ScalingDeactivation, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1659573556321378395, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
+      propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.Behaviour, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659573556321378395, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
       propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659573556321378395, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
+      propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1845504034726094610, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
@@ -75,6 +99,10 @@ PrefabInstance:
     - target: {fileID: 1964053341582903703, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
       propertyPath: m_Radius
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736644876215859083, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5082037198085085351, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
       propertyPath: m_SleepingMode
@@ -110,7 +138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8093605575849588045, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.75
+      value: 18.949999
       objectReference: {fileID: 0}
     - target: {fileID: 8093605575849588045, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -190,6 +218,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countEnergy: 50
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &953230886515473624
 SpriteRenderer:
   m_ObjectHideFlags: 0
