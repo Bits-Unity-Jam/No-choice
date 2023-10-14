@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Merge.unity
+    path: Assets/Scenes/MapGeneration.unity
     guid: a45f5ae284a32f24d8b78445570c628b
   m_configObjects: {}
