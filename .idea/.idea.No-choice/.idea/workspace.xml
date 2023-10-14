@@ -8,6 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Energy/EnergyBooster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Energy/EnergyController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Shadowing/ShadowingScreen.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -82,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1697235889201</updated>
       <workItem from="1697235893116" duration="5943000" />
-      <workItem from="1697302218901" duration="1571000" />
+      <workItem from="1697302218901" duration="3449000" />
     </task>
     <servers />
   </component>
@@ -93,24 +94,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Script/Shadowing/ShadowingScreen.cs</url>
-          <line>32</line>
-          <properties documentPath="D:\Project\Unity\No-choice\Assets\Script\Shadowing\ShadowingScreen.cs" initialLine="32" containingFunctionPresentation="method 'SetImageColor'">
-            <startOffsets>
-              <option value="762" />
-            </startOffsets>
-            <endOffsets>
-              <option value="824" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
