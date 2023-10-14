@@ -7,12 +7,6 @@ public class CameraTurn : MonoBehaviour
 
     public void Turn()
     {
-        transform.DORotate(new Vector3(0f, 0.0f, 180.0f), rotationDuration).SetEase(Ease.Linear);
-        Debug.Log("Turn");
-    }
-    public void Turn2()
-    {
-        transform.DORotate(new Vector3(0f, 0.0f, 0.0f), rotationDuration).SetEase(Ease.Linear);
-        Debug.Log("Turn2");
+        transform.DORotate(new Vector3(0f, 0.0f, transform.rotation.eulerAngles.z != 180.0f ? 180.0f: 0.0f), rotationDuration).SetEase(Ease.Linear);
     }
 }

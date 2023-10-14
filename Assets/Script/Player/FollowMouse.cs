@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class AttachMouse : MonoBehaviour
+public class FollowMouse : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float error;
