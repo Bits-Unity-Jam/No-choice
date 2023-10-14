@@ -17,8 +17,14 @@ public class AttachMouse : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 mousePositionScreen = Input.mousePosition;
-
         
+        if(mousePositionScreen.x< 0 || mousePositionScreen.x > Screen.width||
+            mousePositionScreen.y < 0 || mousePositionScreen.y > Screen.height)
+        {
+            return;
+        }
+
+
         Vector2 in_world = new Vector2(Camera.main.ScreenToWorldPoint(mousePositionScreen).x, Camera.main.ScreenToWorldPoint(mousePositionScreen).y);
         //rb.position = in_world;
 

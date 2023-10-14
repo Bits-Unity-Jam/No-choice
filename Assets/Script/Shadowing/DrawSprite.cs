@@ -39,7 +39,7 @@ public class DrawSprite : MonoBehaviour
 
     private void InitializeTexture()
     {
-        texture = new Texture2D(Screen.width/4, Screen.height/4);
+        texture = new Texture2D(Screen.width/20, Screen.height/ 20);
         for (int x = 0; x < texture.width; x++)
         {
             for (int y = 0; y < texture.height; y++)
