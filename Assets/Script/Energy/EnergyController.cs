@@ -36,7 +36,7 @@ namespace Game.Energy
             {
                 Destroy(this.gameObject);
             }
-            
+
             _currentEnergy = maxEnergy;
             StartCoroutine(UpdateTimer());
         }
@@ -66,8 +66,6 @@ namespace Game.Energy
             EnergyPercentChanged?.Invoke(_currentPercentEnergy, timeToTick);
             EnergyChanged?.Invoke(_currentEnergy, timeToTick);
         }
-
-       
     }
 }
 

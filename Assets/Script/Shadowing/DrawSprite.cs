@@ -1,5 +1,6 @@
 using Game.Energy;
 using Game.Energy.UI;
+using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,24 +10,22 @@ public class DrawSprite : MonoBehaviour
 
     [SerializeField] private int _thickness = 10;
     [SerializeField] private float _notSmoothRadiusPrecenteg = 50.0f;
-    [SerializeField] private float _refillingSpeed = 0.01f;
+    [SerializeField] private float _refillingSpeed = 0.05f;
+    [SerializeField] private float _refillingTimeStep = 0.1f;
 
     private Image image;
     private Texture2D texture;
+
+    private Vector2 point;
+
+
 
     private void Start()
     {
         image = GetComponent<Image>();
         InitializeTexture();
-        EnergyController.Instance.EnergyChanged += Refilling;
+        StartCoroutine(Refilling());
     }
-
-
-    private void OnDestroy()
-    {
-        EnergyController.Instance.EnergyChanged -= Refilling;
-    }
-
 
 
     private  void LateUpdate()
@@ -57,13 +56,12 @@ public class DrawSprite : MonoBehaviour
     {
         int centerX = (int)position.x;
         int centerY = (int)position.y;
-        Color[] colors = texture.GetPixels();
 
         for (int x = centerX - radius; x < centerX + radius; x++)
         {
             for (int y = centerY - radius; y < centerY + radius; y++)
             {
-                Vector2 point = new Vector2(x, y);
+               point = new Vector2(x, y);
                 float distance = Vector2.Distance(point, position);
 
                 if(distance < radius)
@@ -81,46 +79,48 @@ public class DrawSprite : MonoBehaviour
                             float endDist = radius - smoothDistance;
                             float smoothPrecentage = delta / endDist;
                             color.a = smoothPrecentage;
-                            if(color.a < colors[y * texture.width + x].a)
+                            if(color.a < texture.GetPixel(x,y).a)
                             {
-                                colors[y * texture.width + x] = color;
+                                texture.SetPixel(x, y,color);
                             }
                         }
                         else if (smoothDistance > distance)
                         {
                             color.a = 0;
-                            colors[y * texture.width + x] = color;
+                            texture.SetPixel(x, y, color);
                         }
                     }
                 } 
             }
         }
-
-        texture.SetPixels(colors);
         texture.Apply();
     }
 
-    private void Refilling(float value, float timeToTick)
+    private IEnumerator Refilling()
     {
-        bool needApply = false;
-        Color[] colors = texture.GetPixels();
-        for (int x = 0; x < texture.width; x++)
+        while (true)
         {
-            for (int y = 0; y < texture.height; y++)
+            Color[] colors = texture.GetPixels();
+            bool needApply = false;
+            for (int x = 0; x < texture.width; x++)
             {
-                Color color = colors[y * texture.width + x];
-                if (colors[y * texture.width + x].a < 1.0f)
+                for (int y = 0; y < texture.height; y++)
                 {
-                    colors[y * texture.width + x].a += _refillingSpeed;
-                    needApply = true;
+                    if (colors[y * texture.width + x].a < 1.0f)
+                    {
+                        colors[y * texture.width + x].a += _refillingSpeed;
+                        needApply = true;
+                    }
                 }
             }
+            if (needApply)
+            {
+                texture.SetPixels(colors);
+                texture.Apply();
+            }
+            yield return new WaitForSeconds(_refillingTimeStep);
         }
-        if (needApply)
-        {
-            texture.SetPixels(colors);
-            texture.Apply();
-        }
+        
     }
 }
 
