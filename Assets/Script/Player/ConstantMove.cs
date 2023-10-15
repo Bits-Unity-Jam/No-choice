@@ -10,8 +10,10 @@ public class ConstantMove : MonoBehaviour
     public float Speed { get => _speed; set => _speed = value; }
     public float DefaultSpeed { get => _defaultSpeed; private set => _defaultSpeed = value; }
 
-   
-
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
     void Update()
     {
         transform.Translate(Vector2.up * Time.deltaTime * Speed);

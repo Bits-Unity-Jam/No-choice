@@ -7,6 +7,8 @@ public class FollowMouse : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float error;
+    [SerializeField]
+    private float lerpDist = 1f;
 
     Rigidbody2D rb;
     private void Awake()
@@ -30,13 +32,13 @@ public class FollowMouse : MonoBehaviour
 
         Vector2 moveDirection = (in_world - rb.position).normalized;
 
-        if (Vector2.Distance(transform.position, in_world) > error)
-        {
-            rb.velocity = moveDirection * speed;
-        }
-        else
-        {
-            rb.velocity = Vector2.zero;
-        }
+
+        var distance = Vector2.Distance(transform.position, in_world);
+
+        var percent = Mathf.Clamp01(distance/lerpDist);
+
+
+
+        rb.velocity = moveDirection * speed * percent;
     }
 }
