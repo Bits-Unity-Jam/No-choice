@@ -38,7 +38,6 @@ namespace Game.Energy
             }
 
             _currentEnergy = maxEnergy;
-            StartCoroutine(UpdateTimer());
         }
     
         private IEnumerator UpdateTimer()
@@ -48,6 +47,12 @@ namespace Game.Energy
                 ChangeEnergy(energyPerSecond, EnergyOperation.Subtract);
                 yield return new WaitForSeconds(timeToTick);
             }
+        }
+
+        public void StartTimer()
+        {
+
+            StartCoroutine(UpdateTimer());
         }
 
         public void ChangeEnergy(float energyCount, EnergyOperation operation)
