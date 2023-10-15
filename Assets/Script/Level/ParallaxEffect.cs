@@ -15,7 +15,7 @@ public class VerticalParallax : MonoBehaviour
         initialYPosition = transform.localPosition.y;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         float deltaY = cameraTransform.localPosition.y - previousCameraPosition.y;
 
