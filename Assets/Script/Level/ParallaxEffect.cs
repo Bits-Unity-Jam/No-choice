@@ -4,30 +4,30 @@ public class VerticalParallax : MonoBehaviour
 {
     public float parallaxSpeed = 1.0f;
     public float repeatOffset = 10.0f; // The distance at which layers repeat
-    private Transform cameraTransform;
+    public Transform cameraTransform;
     private Vector3 previousCameraPosition;
     private float initialYPosition;
 
     void Start()
     {
-        cameraTransform = Camera.main.transform;
+        //cameraTransform = Camera.main.transform;
         previousCameraPosition = cameraTransform.position;
-        initialYPosition = transform.position.y;
+        initialYPosition = transform.localPosition.y;
     }
 
     void Update()
     {
-        float deltaY = cameraTransform.position.y - previousCameraPosition.y;
+        float deltaY = cameraTransform.localPosition.y - previousCameraPosition.y;
 
         // Move the layer based on parallax speed
-        Vector3 newPosition = transform.position + Vector3.up * deltaY * parallaxSpeed;
-        transform.position = newPosition;
+        Vector3 newPosition = transform.localPosition + Vector3.up * deltaY * parallaxSpeed;
+        transform.localPosition = newPosition;
 
         // Check if the layer has moved out of the screen
-        if (Mathf.Abs(transform.position.y - initialYPosition) >= repeatOffset)
+        if (Mathf.Abs(transform.localPosition.y - initialYPosition) >= repeatOffset)
         {
             // Move the layer back to its initial position
-            transform.position = new Vector3(transform.position.x, initialYPosition, transform.position.z);
+            transform.localPosition = new Vector3(transform.localPosition.x, initialYPosition, transform.localPosition.z);
         }
 
         previousCameraPosition = cameraTransform.position;
