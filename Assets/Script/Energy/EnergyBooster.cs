@@ -24,7 +24,6 @@ namespace Game.Energy.Booster
                 {
                     isActivate = true;
                     EnergyController.Instance.ChangeEnergy(countEnergy, EnergyOperation.Add);
-
                     onDestroy.Invoke();
                 }
                 

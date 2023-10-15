@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 2960941899162682520}
   m_Layer: 0
   m_Name: SmallCircle
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
