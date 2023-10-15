@@ -1,116 +1,109 @@
-using Game.Energy;
-using Game.Energy.UI;
-using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DrawSprite : MonoBehaviour
 {
-
-    [SerializeField] private int _thickness = 10;
-    [SerializeField] private float _notSmoothRadiusPrecenteg = 50.0f;
-    [SerializeField] private float _refillingSpeed = 0.05f;
-    [SerializeField] private float _refillingTimeStep = 0.1f;
+    [SerializeField] private int thickness = 10;
+    [SerializeField] private float notSmoothRadiusPercent = 50.0f;
+    [SerializeField] private float refillingSpeed = 0.05f;
+    [SerializeField] private float refillingTimeStep = 0.1f;
 
     private Image image;
     private Texture2D texture;
-
     private Vector2 point;
 
-
-
-    private void Start()
+    private async void Start()
     {
         image = GetComponent<Image>();
         InitializeTexture();
-        StartCoroutine(Refilling());
+        await RefillingAsync();
     }
 
-
-    private  void LateUpdate()
+    private void LateUpdate()
     {
         if (Input.GetMouseButton(0))
         {
-            Vector2 posOnTexture = new Vector2(Input.mousePosition.x * ((float)texture.width / Screen.width),Input.mousePosition.y * ((float)texture.height / Screen.height));
-            DrawCircleOnTexture(posOnTexture, Color.clear, _thickness);
+            Vector2 posOnTexture = new Vector2(Input.mousePosition.x * ((float)texture.width / Screen.width), Input.mousePosition.y * ((float)texture.height / Screen.height));
+            DrawCircleOnTexture(posOnTexture, Color.clear, thickness);
         }
     }
 
     private void InitializeTexture()
     {
-        texture = new Texture2D(Screen.width/20, Screen.height/ 20);
-        for (int x = 0; x < texture.width; x++)
+        int width = Screen.width / 20;
+        int height = Screen.height / 20;
+        texture = new Texture2D(width, height);
+        Color[] pixels = new Color[width * height];
+        for (int i = 0; i < pixels.Length; i++)
         {
-            for (int y = 0; y < texture.height; y++)
-            {
-                texture.SetPixel(x, y, Color.black);
-            }
+            pixels[i] = Color.black;
         }
+        texture.SetPixels(pixels);
         texture.Apply();
-
-        image.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+        image.sprite = Sprite.Create(texture, new Rect(0, 0, width, height), new Vector2(0.5f, 0.5f));
     }
 
-    private  void  DrawCircleOnTexture(Vector2 position, Color color, int radius)
+    private void DrawCircleOnTexture(Vector2 position, Color color, int radius)
     {
         int centerX = (int)position.x;
         int centerY = (int)position.y;
+        float smoothDistance = radius * (notSmoothRadiusPercent / 100.0f);
+        float endDist = radius - smoothDistance;
 
-        for (int x = centerX - radius; x < centerX + radius; x++)
+        centerX = Mathf.Clamp(centerX, radius, texture.width - radius);
+        centerY = Mathf.Clamp(centerY, radius, texture.height - radius);
+
+        Color[] colors = texture.GetPixels(centerX - radius, centerY - radius, 2 * radius, 2 * radius);
+
+        for (int x = 0; x < 2 * radius; x++)
         {
-            for (int y = centerY - radius; y < centerY + radius; y++)
+            for (int y = 0; y < 2 * radius; y++)
             {
-               point = new Vector2(x, y);
+                point.x = centerX - radius + x;
+                point.y = centerY - radius + y;
                 float distance = Vector2.Distance(point, position);
 
-                if(distance < radius)
+                if (distance < radius)
                 {
-                    if (x <= 0 || x >= texture.width || y <= 0 || y >= texture.height)
+                    if (point.x < 0 || point.x >= texture.width || point.y < 0 || point.y >= texture.height)
                     {
+                        continue;
+                    }
 
-                    }
-                    else
+                    if (distance >= smoothDistance)
                     {
-                        float smoothDistance = radius * (_notSmoothRadiusPrecenteg / 100.0f);
-                        if (distance >= smoothDistance)
+                        float delta = distance - smoothDistance;
+                        float smoothPercentage = delta / endDist;
+                        color.a = smoothPercentage;
+                        if (color.a < colors[y * 2 * radius + x].a)
                         {
-                            float delta = distance - smoothDistance;
-                            float endDist = radius - smoothDistance;
-                            float smoothPrecentage = delta / endDist;
-                            color.a = smoothPrecentage;
-                            if(color.a < texture.GetPixel(x,y).a)
-                            {
-                                texture.SetPixel(x, y,color);
-                            }
-                        }
-                        else if (smoothDistance > distance)
-                        {
-                            color.a = 0;
-                            texture.SetPixel(x, y, color);
+                            colors[y * 2 * radius + x] = color;
                         }
                     }
-                } 
+                    else if (smoothDistance > distance)
+                    {
+                        colors[y * 2 * radius + x].a = 0;
+                    }
+                }
             }
         }
+        texture.SetPixels(centerX - radius, centerY - radius, 2 * radius, 2 * radius, colors);
         texture.Apply();
     }
 
-    private IEnumerator Refilling()
+    private async Task RefillingAsync()
     {
         while (true)
         {
             Color[] colors = texture.GetPixels();
             bool needApply = false;
-            for (int x = 0; x < texture.width; x++)
+            for (int i = 0; i < colors.Length; i++)
             {
-                for (int y = 0; y < texture.height; y++)
+                if (colors[i].a < 1.0f)
                 {
-                    if (colors[y * texture.width + x].a < 1.0f)
-                    {
-                        colors[y * texture.width + x].a += _refillingSpeed;
-                        needApply = true;
-                    }
+                    colors[i].a += refillingSpeed;
+                    needApply = true;
                 }
             }
             if (needApply)
@@ -118,9 +111,7 @@ public class DrawSprite : MonoBehaviour
                 texture.SetPixels(colors);
                 texture.Apply();
             }
-            yield return new WaitForSeconds(_refillingTimeStep);
+            await Task.Delay((int)(refillingTimeStep * 1000));
         }
-        
     }
 }
-

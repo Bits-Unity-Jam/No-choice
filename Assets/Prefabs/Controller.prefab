@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxEnergy: 100
-  energyPerSecond: 5
+  energyPerSecond: 10
   timeToTick: 1
 --- !u!1 &6602620875498174495
 GameObject:
