@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using Game.Controller;
 using TMPro;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
@@ -19,6 +20,8 @@ namespace Game.Score
         [Header("Player")]
         [SerializeField]
         private Transform player;
+        [SerializeField]
+        private GameController gameController;
         
         private int _lastScore;
         private int _bestScore;
@@ -29,29 +32,48 @@ namespace Game.Score
         private float _currentDistance;
         
         private const string BEST_SCORE = "BestScore";
-        private const string LAST_SCORE = "LastScore";
+
+        private bool _stopScore = false;
 
         private void Awake()
         {
             _startPoint = player.position;
             
             SetBestScore();
+
+            gameController.GameOver += SaveBestScore;
+        }
+
+        private void Start()
+        {
+            SetBestScore();
+        }
+
+        private void OnDestroy()
+        {
+            gameController.GameOver -= SaveBestScore;
         }
 
         private void Update()
         {
-            _currentPoint = player.position;
-            _currentDistance = Vector3.Distance(_startPoint, _currentPoint);
+            if(!_stopScore)
+            {
+                _currentPoint = player.position;
+                _currentDistance = Vector3.Distance(_startPoint, _currentPoint);
 
-            textScore.text = ((int)_currentDistance).ToString();
+                textScore.text = ((int)_currentDistance).ToString();
+            }
         }
 
         private void SaveBestScore()
         {
+            _lastScore = (int)_currentDistance;
+            _stopScore = true;
+            
             if (_bestScore < _lastScore)
             {
                 _bestScore = _lastScore;
-                PlayerPrefs.SetFloat(BEST_SCORE, _bestScore);
+                PlayerPrefs.SetInt(BEST_SCORE, _bestScore);
             }
         }
         
@@ -64,6 +86,7 @@ namespace Game.Score
             else 
             {
                 _bestScore = 0;
+                PlayerPrefs.SetFloat(BEST_SCORE, _bestScore);
             }
             
             bestScore.text = (_bestScore).ToString();

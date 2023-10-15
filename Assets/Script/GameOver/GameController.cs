@@ -9,12 +9,18 @@ namespace Game.Controller
         private const string ENEMY = "Enemy";
 
         public Action GameOver;
+        private bool _gameIsOver = false;
     
         private void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.CompareTag(ENEMY))
             {
-                GameOver?.Invoke();
+                if (!_gameIsOver)
+                {
+                    _gameIsOver = true;
+                    GameOver?.Invoke();
+                }
+                    
             }
         }
     }

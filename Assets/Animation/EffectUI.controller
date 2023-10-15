@@ -28,7 +28,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Effect
+  m_Name: EffectUI
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -64,7 +64,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ae1d26636381900489cc4492485a2ad4, type: 2}
+  m_Motion: {fileID: 7400000, guid: eeb5316efcbca234ea82ceb4d97defe9, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
