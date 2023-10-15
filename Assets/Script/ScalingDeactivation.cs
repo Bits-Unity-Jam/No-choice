@@ -7,8 +7,7 @@ using UnityEngine.Events;
 public class ScalingDeactivation : MonoBehaviour
 {
     [SerializeField] private UnityEvent onAnimationCompleted;
-
-    [SerializeField] private float duration =1.0f;
+private float duration = 0.5f;
     [SerializeField] private Transform transformToScale;
     public void Scale()
     {
