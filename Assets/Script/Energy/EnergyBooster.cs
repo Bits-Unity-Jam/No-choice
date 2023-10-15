@@ -9,6 +9,8 @@ namespace Game.Energy.Booster
     {
         [SerializeField]
         private float countEnergy;
+        [SerializeField]
+        private AudioSource audioSource;
 
         private bool isActivate = false;
         private const string PLAYER = "Factory";
@@ -25,6 +27,8 @@ namespace Game.Energy.Booster
                     isActivate = true;
                     EnergyController.Instance.ChangeEnergy(countEnergy, EnergyOperation.Add);
 
+                    audioSource.Play();
+                    
                     onDestroy.Invoke();
                 }
                 
