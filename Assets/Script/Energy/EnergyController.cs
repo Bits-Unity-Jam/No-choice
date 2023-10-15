@@ -65,7 +65,7 @@ namespace Game.Energy
             {
                 _currentEnergy -= energyCount;
             }
-
+            if(_currentEnergy < 0) { _currentEnergy = 0; }
             _currentPercentEnergy = ((CurrentEnergy / MaxEnergy) * 100) / 100;
            
             EnergyPercentChanged?.Invoke(_currentPercentEnergy, timeToTick);
