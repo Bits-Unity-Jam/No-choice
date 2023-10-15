@@ -403,7 +403,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 398750605693488425, guid: 358126650c36c454d813f54722633b72, type: 3}
       propertyPath: m_Name
-      value: Chunk (2)
+      value: Chunk
       objectReference: {fileID: 0}
     - target: {fileID: 4732803529957720464, guid: 358126650c36c454d813f54722633b72, type: 3}
       propertyPath: m_LocalPosition.x
@@ -532,7 +532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2620444739777962450, guid: 9b4b7a61290afa546ba0d72dddd806fd, type: 3}
       propertyPath: m_Name
-      value: Chunk 3
+      value: Chunk
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -737,7 +737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8923408732115801515, guid: df73dc14bbc5f85458f8455a6862ea6f, type: 3}
       propertyPath: m_Name
-      value: Chunk (1)
+      value: Chunk
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -892,7 +892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6750199884413962678, guid: bf4b7b7493f8cb1408b475eec4f7c892, type: 3}
       propertyPath: m_Name
-      value: Electric factory
+      value: Electric Factory
       objectReference: {fileID: 0}
     - target: {fileID: 9047306138583171259, guid: bf4b7b7493f8cb1408b475eec4f7c892, type: 3}
       propertyPath: m_Size.x
@@ -925,7 +925,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 837377260319721523, guid: 1831b112c4626b94fb95550a30ba4cb5, type: 3}
       propertyPath: m_Name
-      value: Chunk 4
+      value: Chunk
       objectReference: {fileID: 0}
     - target: {fileID: 3867472163243257023, guid: 1831b112c4626b94fb95550a30ba4cb5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1022,7 +1022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7219434304926890842, guid: 27c26715cb0a9cd46a6a653cc0746b77, type: 3}
       propertyPath: m_Name
-      value: Chack 2
+      value: Chunk
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1055,7 +1055,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2191108807999641064, guid: 2997d68334ae3c84e8561c060eab2c40, type: 3}
       propertyPath: m_Name
-      value: Chunk (3)
+      value: Chunk
       objectReference: {fileID: 0}
     - target: {fileID: 5005325352068232964, guid: 2997d68334ae3c84e8561c060eab2c40, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1168,7 +1168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8522096446016949502, guid: 2c92793caab1bd048bb9926a279bb40a, type: 3}
       propertyPath: m_Name
-      value: Chunk (4)
+      value: Chunk
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1344,12 +1344,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1939767714}
     - target: {fileID: 5166985039286293455, guid: eec67b0b2b350b5499508406e9b13e20, type: 3}
+      propertyPath: refillingSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166985039286293455, guid: eec67b0b2b350b5499508406e9b13e20, type: 3}
       propertyPath: _refillingSpeed
       value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8585419561940855543, guid: eec67b0b2b350b5499508406e9b13e20, type: 3}
       propertyPath: m_Name
-      value: Canvas (1)
+      value: Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1422,14 +1426,6 @@ PrefabInstance:
     - target: {fileID: 356728457702021493, guid: 3f818b16e1bda2f43b5d0fe8faa094fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5817015530792380499, guid: 3f818b16e1bda2f43b5d0fe8faa094fe, type: 3}
-      propertyPath: timeToTick
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5817015530792380499, guid: 3f818b16e1bda2f43b5d0fe8faa094fe, type: 3}
-      propertyPath: energyPerSecond
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6602620875498174495, guid: 3f818b16e1bda2f43b5d0fe8faa094fe, type: 3}
       propertyPath: m_Name
