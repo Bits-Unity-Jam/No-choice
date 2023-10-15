@@ -226,6 +226,7 @@ MonoBehaviour:
     _initLocalPosition: {x: 8.32, y: -0.78}
     _initLocalRotation: {x: -0, y: -0, z: -0, w: 1}
     _memberRb: {fileID: 3766598766554847716}
+  _collidersToEnable: []
 --- !u!1001 &2044620367452858689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -304,6 +305,11 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 5801432073761637904, guid: 09496ca8acabcfd47a1e95e44cd88cfc, type: 3}
   m_PrefabInstance: {fileID: 2044620367452858689}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &5974196765759421467 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5672124483619444058, guid: 09496ca8acabcfd47a1e95e44cd88cfc, type: 3}
+  m_PrefabInstance: {fileID: 2044620367452858689}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6744907985854273910 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4739274960827346999, guid: 09496ca8acabcfd47a1e95e44cd88cfc, type: 3}
@@ -331,6 +337,8 @@ MonoBehaviour:
     _initLocalPosition: {x: 8.2, y: 1.11}
     _initLocalRotation: {x: -0, y: -0, z: -0, w: 1}
     _memberRb: {fileID: 5538619263038828369}
+  _collidersToEnable:
+  - {fileID: 5974196765759421467}
 --- !u!1001 &2478358335782300236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -440,6 +448,7 @@ MonoBehaviour:
     _initLocalPosition: {x: 6.5, y: -0.78}
     _initLocalRotation: {x: -0, y: -0, z: -0, w: 1}
     _memberRb: {fileID: 385192854881140164}
+  _collidersToEnable: []
 --- !u!1001 &8674207743679747024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -539,6 +548,7 @@ MonoBehaviour:
     _initLocalPosition: {x: 10.38, y: -0.78}
     _initLocalRotation: {x: -0, y: -0, z: -0, w: 1}
     _memberRb: {fileID: 6871480273626891352}
+  _collidersToEnable: []
 --- !u!50 &6871480273626891352 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 2827309603645806472, guid: 2f4a3c76decc6d0469042834c56a3c4b, type: 3}
@@ -648,6 +658,7 @@ MonoBehaviour:
     _initLocalPosition: {x: 8.3, y: -2.62}
     _initLocalRotation: {x: -0, y: -0, z: -0, w: 1}
     _memberRb: {fileID: 6810167759225057496}
+  _collidersToEnable: []
 --- !u!50 &6810167759225057496 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 2827309603645806472, guid: 2f4a3c76decc6d0469042834c56a3c4b, type: 3}
