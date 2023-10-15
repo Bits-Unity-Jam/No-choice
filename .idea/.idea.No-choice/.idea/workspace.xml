@@ -12,6 +12,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/Energy/EnergyController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/BoomAnimation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Shadowing/ShadowingScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Sound/PlaySound.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -85,7 +86,7 @@
       <updated>1697235889201</updated>
       <workItem from="1697235893116" duration="5943000" />
       <workItem from="1697302218901" duration="10864000" />
-      <workItem from="1697359768794" duration="3439000" />
+      <workItem from="1697359768794" duration="5725000" />
     </task>
     <servers />
   </component>

@@ -100,10 +100,18 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 3402746309393949887, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
+      propertyPath: m_Name
+      value: Take
+      objectReference: {fileID: 0}
     - target: {fileID: 3736644876215859083, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3775461788415393553, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a09f8b2af0804c34699e8736531a984a, type: 3}
     - target: {fileID: 5082037198085085351, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
       propertyPath: m_SleepingMode
       value: 2
@@ -218,6 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countEnergy: 50
+  audioSource: {fileID: 7974208149616049225}
   onDestroy:
     m_PersistentCalls:
       m_Calls: []
@@ -322,3 +331,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   duration: 1
+--- !u!82 &7974208149616049225 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3775461788415393553, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
+  m_PrefabInstance: {fileID: 6543508631066559320}
+  m_PrefabAsset: {fileID: 0}

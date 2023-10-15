@@ -6,6 +6,9 @@ namespace Game.Controller
 {
     public class GameController : MonoBehaviour
     {
+        [SerializeField]
+        private AudioSource audioSource;
+        
         private const string ENEMY = "Enemy";
 
         public Action GameOver;
@@ -18,6 +21,8 @@ namespace Game.Controller
                 if (!_gameIsOver)
                 {
                     _gameIsOver = true;
+                    audioSource.Play();
+                    
                     GameOver?.Invoke();
                 }
                     
