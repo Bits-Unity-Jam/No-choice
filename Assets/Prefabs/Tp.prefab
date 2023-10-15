@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3c5c71b37c44d4b80f81777a0cbb2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationDuration: 2
+  rotationDuration: 1
 --- !u!1 &4739274960827346999
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,6 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   error: 0.21
+  lerpDist: 1
 --- !u!114 &1128426434787381374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,5 +396,4 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  duration: 1
   transformToScale: {fileID: 2559102586704805172}
