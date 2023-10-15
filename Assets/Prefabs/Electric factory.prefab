@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 8404600016834936696}
   - component: {fileID: 6344628655800331625}
   m_Layer: 7
-  m_Name: Electric factory
+  m_Name: Electric Factory
   m_TagString: Factory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
