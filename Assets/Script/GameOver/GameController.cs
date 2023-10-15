@@ -8,6 +8,8 @@ namespace Game.Controller
     {
         [Header("Boom Objects")]
         [SerializeField]
+        private AudioSource boomSource;
+        [SerializeField]
         private AudioSource audioSource;
         [SerializeField]
         private GameObject boom;
@@ -26,8 +28,9 @@ namespace Game.Controller
                     _gameIsOver = true;
                     
                     audioSource.Play();
-                    boom.SetActive(true);
+                    boomSource.Play();
                     
+                    boom.SetActive(true);
                     GameOver?.Invoke();
                 }
                     
