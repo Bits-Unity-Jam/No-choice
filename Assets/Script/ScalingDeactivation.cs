@@ -12,6 +12,7 @@ public class ScalingDeactivation : MonoBehaviour
     [SerializeField] private Transform transformToScale;
     public void Scale()
     {
+        transformToScale ??= transform.parent;
         transformToScale.DOScale(Vector2.zero, duration).OnComplete(() => { onAnimationCompleted?.Invoke(); });
     }
 }
