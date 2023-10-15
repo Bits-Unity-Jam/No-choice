@@ -259,6 +259,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   duration: 1
+  transformToScale: {fileID: 5827845405482869141}
 --- !u!1 &8454606270678080473
 GameObject:
   m_ObjectHideFlags: 0

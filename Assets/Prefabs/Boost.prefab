@@ -197,6 +197,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4578887363872306248}
   m_SourcePrefab: {fileID: 100100000, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
+--- !u!4 &3070739223520638485 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8093605575849588045, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
+  m_PrefabInstance: {fileID: 6543508631066559320}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4851426050968314954 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1845504034726094610, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
@@ -331,6 +336,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   duration: 1
+  transformToScale: {fileID: 3070739223520638485}
 --- !u!82 &7974208149616049225 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 3775461788415393553, guid: 78d712e44a723d94e8fe3edcf6c3404a, type: 3}
