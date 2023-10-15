@@ -9,8 +9,9 @@ public class ScalingDeactivation : MonoBehaviour
     [SerializeField] private UnityEvent onAnimationCompleted;
 
     [SerializeField] private float duration =1.0f;
+    [SerializeField] private Transform transformToScale;
     public void Scale()
     {
-        transform.DOScale(Vector2.zero, duration).OnComplete(() => { onAnimationCompleted?.Invoke(); });
+        transformToScale.DOScale(Vector2.zero, duration).OnComplete(() => { onAnimationCompleted?.Invoke(); });
     }
 }
