@@ -1328,10 +1328,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5817015530792380499, guid: 3f818b16e1bda2f43b5d0fe8faa094fe, type: 3}
-      propertyPath: timeToTick
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6602620875498174495, guid: 3f818b16e1bda2f43b5d0fe8faa094fe, type: 3}
       propertyPath: m_Name
       value: Controller
