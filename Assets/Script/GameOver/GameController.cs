@@ -6,8 +6,11 @@ namespace Game.Controller
 {
     public class GameController : MonoBehaviour
     {
+        [Header("Boom Objects")]
         [SerializeField]
         private AudioSource audioSource;
+        [SerializeField]
+        private GameObject boom;
         
         private const string ENEMY = "Enemy";
 
@@ -21,7 +24,9 @@ namespace Game.Controller
                 if (!_gameIsOver)
                 {
                     _gameIsOver = true;
+                    
                     audioSource.Play();
+                    boom.SetActive(true);
                     
                     GameOver?.Invoke();
                 }
