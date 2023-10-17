@@ -12,7 +12,9 @@ namespace Game.Shadowing
     public class ShadowingScreen : MonoBehaviour
     {
         private Image shadowBackground;
-        
+        private Tweener myTween;
+
+
         private void Awake()
         {
             shadowBackground = GetComponent<Image>();
@@ -26,11 +28,16 @@ namespace Game.Shadowing
         private void OnDestroy()
         {
             EnergyController.Instance.EnergyPercentChanged -= SetImageColor;
+            if (myTween != null && myTween.IsActive())
+            {
+                myTween.Kill();
+            }
         }
 
         private void SetImageColor(float value, float tickTIme)
         {
-            shadowBackground.DOFade(1-value, tickTIme).SetEase(Ease.Linear);
+            if (shadowBackground == null) return;
+            myTween = shadowBackground.DOFade(1-value, tickTIme).SetEase(Ease.Linear);
         }
     }
 }
