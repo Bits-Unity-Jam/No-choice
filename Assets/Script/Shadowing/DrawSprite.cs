@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,7 +18,7 @@ public class DrawSprite : MonoBehaviour
     {
         image = GetComponent<Image>();
         InitializeTexture();
-        await RefillingAsync();
+        StartCoroutine(RefillingAsync());
     }
 
     private void LateUpdate()
@@ -92,7 +93,7 @@ public class DrawSprite : MonoBehaviour
         texture.Apply();
     }
 
-    private async Task RefillingAsync()
+    private IEnumerator  RefillingAsync()
     {
         while (true)
         {
@@ -111,7 +112,7 @@ public class DrawSprite : MonoBehaviour
                 texture.SetPixels(colors);
                 texture.Apply();
             }
-            await Task.Delay((int)(refillingTimeStep * 1000));
+           yield return new WaitForSeconds(refillingTimeStep * 1000);
         }
     }
 }
