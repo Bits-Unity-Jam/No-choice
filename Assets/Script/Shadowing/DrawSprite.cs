@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,7 +18,7 @@ public class DrawSprite : MonoBehaviour
     {
         image = GetComponent<Image>();
         InitializeTexture();
-        await RefillingAsync();
+        StartCoroutine(RefillingAsync());
     }
 
     private void LateUpdate()
@@ -51,14 +52,16 @@ public class DrawSprite : MonoBehaviour
         float smoothDistance = radius * (notSmoothRadiusPercent / 100.0f);
         float endDist = radius - smoothDistance;
 
-        centerX = Mathf.Clamp(centerX, radius, texture.width - radius);
-        centerY = Mathf.Clamp(centerY, radius, texture.height - radius);
+        int startX = Mathf.Clamp(centerX - radius, 0, texture.width - 1);
+        int startY = Mathf.Clamp(centerY - radius, 0, texture.height - 1);
+        int endX = Mathf.Clamp(centerX + radius, 0, texture.width - 1);
+        int endY = Mathf.Clamp(centerY + radius, 0, texture.height - 1);
 
-        Color[] colors = texture.GetPixels(centerX - radius, centerY - radius, 2 * radius, 2 * radius);
+        Color[] colors = texture.GetPixels(startX, startY, endX - startX + 1, endY - startY + 1);
 
-        for (int x = 0; x < 2 * radius; x++)
+        for (int x = 0; x < endX - startX + 1; x++)
         {
-            for (int y = 0; y < 2 * radius; y++)
+            for (int y = 0; y < endY - startY + 1; y++)
             {
                 point.x = centerX - radius + x;
                 point.y = centerY - radius + y;
@@ -76,23 +79,23 @@ public class DrawSprite : MonoBehaviour
                         float delta = distance - smoothDistance;
                         float smoothPercentage = delta / endDist;
                         color.a = smoothPercentage;
-                        if (color.a < colors[y * 2 * radius + x].a)
+                        if (color.a < colors[y * (endX - startX + 1) + x].a)
                         {
-                            colors[y * 2 * radius + x] = color;
+                            colors[y * (endX - startX + 1) + x] = color;
                         }
                     }
                     else if (smoothDistance > distance)
                     {
-                        colors[y * 2 * radius + x].a = 0;
+                        colors[y * (endX - startX + 1) + x].a = 0;
                     }
                 }
             }
         }
-        texture.SetPixels(centerX - radius, centerY - radius, 2 * radius, 2 * radius, colors);
+        texture.SetPixels(startX, startY, endX - startX + 1, endY - startY + 1, colors);
         texture.Apply();
     }
-
-    private async Task RefillingAsync()
+    
+    private IEnumerator RefillingAsync()
     {
         while (true)
         {
@@ -111,7 +114,7 @@ public class DrawSprite : MonoBehaviour
                 texture.SetPixels(colors);
                 texture.Apply();
             }
-            await Task.Delay((int)(refillingTimeStep * 1000));
+            yield return new WaitForSeconds(refillingTimeStep);
         }
     }
 }
