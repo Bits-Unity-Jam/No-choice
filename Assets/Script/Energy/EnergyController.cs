@@ -59,18 +59,33 @@ namespace Game.Energy
         {
             if (operation == EnergyOperation.Add)
             {
-                _currentEnergy += energyCount;
+                if (_currentEnergy + energyCount > maxEnergy)
+                {
+                    _currentEnergy = maxEnergy;
+                }
+                else
+                {
+                    _currentEnergy += energyCount;
+                }
             }
             else
             {
-                _currentEnergy -= energyCount;
+                if (_currentEnergy - energyCount < 0)
+                {
+                    _currentEnergy = 0;
+                }
+                else
+                {
+                    _currentEnergy -= energyCount;
+                }
             }
-            if(_currentEnergy < 0) { _currentEnergy = 0; }
-            _currentPercentEnergy = ((CurrentEnergy / MaxEnergy) * 100) / 100;
-           
+
+            _currentPercentEnergy = ((_currentEnergy / maxEnergy) * 100) / 100;
+
             EnergyPercentChanged?.Invoke(_currentPercentEnergy, timeToTick);
             EnergyChanged?.Invoke(_currentEnergy, timeToTick);
         }
+
     }
 }
 

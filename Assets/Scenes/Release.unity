@@ -1305,6 +1305,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1939767714}
     - target: {fileID: 5166985039286293455, guid: eec67b0b2b350b5499508406e9b13e20, type: 3}
+      propertyPath: thickness
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166985039286293455, guid: eec67b0b2b350b5499508406e9b13e20, type: 3}
       propertyPath: _refillingSpeed
       value: 0.01
       objectReference: {fileID: 0}
@@ -1380,6 +1384,10 @@ PrefabInstance:
     - target: {fileID: 356728457702021493, guid: 3f818b16e1bda2f43b5d0fe8faa094fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817015530792380499, guid: 3f818b16e1bda2f43b5d0fe8faa094fe, type: 3}
+      propertyPath: energyPerSecond
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6602620875498174495, guid: 3f818b16e1bda2f43b5d0fe8faa094fe, type: 3}
       propertyPath: m_Name
