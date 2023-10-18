@@ -1,76 +1,61 @@
-using Assets.Script.Chunks;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using Assets.Script.Chunks;
 using UnityEngine;
 
-public class ChunkPlacingService : MonoBehaviour
+namespace Chunks
 {
-    [SerializeField]
-    private Vector3 _placingOffset;
-
-    [SerializeField]
-    private Transform _placingOriginPosition;
-
-    [SerializeField]
-    private List<ChunkBehaviour> _chunkBehaviours;
-
-    [Range(0, 100)]
-    [SerializeField]
-    private float minimumChunkRange;
-
-    [Range(0, 100)]
-    [SerializeField]
-    private float maximumChunkRange;
-
-    [SerializeField]
-    private float _generatedkDistanceToNextChunk;
-    [SerializeField]
-    private float _nextChunkHigh;
-    [SerializeField]
-    private float _lastChunkHigh;
-    [SerializeField]
-    private int _lastChunkIndex;
-    private int _previousChunkIndex;
-
-    private void OnValidate()
+    
+    public class ChunkPlacingService : MonoBehaviour
     {
-        if (maximumChunkRange < minimumChunkRange) maximumChunkRange = minimumChunkRange;
-    }
+        [SerializeField] private float generalMotionSpeed = 1;
+        [SerializeField]
+        private Vector3 _placingOffset;
 
-    private void Start()
-    {
-        CreateConfigForNextChunk();
-    }
+        [SerializeField]
+        private Transform _placingOriginPosition;
 
-    private void Update()
-    {
-        if(_placingOriginPosition.position.y - _lastChunkHigh > _generatedkDistanceToNextChunk)
+        [SerializeField]
+        private List<ChunkBehaviour> _chunkBehaviours;
+
+        [Range(0, 100)]
+        [SerializeField]
+        private float minimumChunkRange;
+
+        [Range(0, 100)]
+        [SerializeField]
+        private float maximumChunkRange;
+
+        [SerializeField] private float chunkSpawnHeight;
+        private int _previousChunkIndex;
+
+        private void OnValidate()
         {
-            CreateConfigForNextChunk();
+            if (maximumChunkRange < minimumChunkRange) maximumChunkRange = minimumChunkRange;
         }
-    }
 
-    private void CreateConfigForNextChunk()
-    {
-        _generatedkDistanceToNextChunk = GenerateDistanceToNextChunk();
-        _lastChunkHigh = _nextChunkHigh;
-        _nextChunkHigh += _generatedkDistanceToNextChunk;
+        void LateUpdate() => _chunkBehaviours.ForEach(HandleParallaxElementBehavior);
 
-
-        do
+        private void HandleChunkBehavior(ChunkBehaviour chunk)
         {
-            _lastChunkIndex = GenerateChunkIndex();
+            float deltaY = generalMotionSpeed * Time.deltaTime;
+
+            // Move the layer based on parallax speed
+            Vector3 newPosition = chunk.transform.localPosition + Vector3.up * deltaY;
+            
+            chunk.transform.localPosition = newPosition;
+
+            // Check if the layer has moved out of the screen
+            if (Mathf.Abs(chunk.transform.localPosition.y - chunk.transform.y) >= chunk.ElementRepeatOffset)
+            {
+                // Move the layer back to its initial position
+                var newLocalPosition = chunk.transform.localPosition;
+                newLocalPosition =
+                    new Vector3(newLocalPosition.x, chunk.transform.y, newLocalPosition.z);
+            
+                chunk.ElementTransform.localPosition = newLocalPosition;
+            }
         }
-        while (_previousChunkIndex == _lastChunkIndex);
 
-        _previousChunkIndex = _lastChunkIndex;
-
-        _chunkBehaviours[_lastChunkIndex].
-            PlaceAtHighRelateOrigin((_placingOriginPosition.position + _placingOffset), _generatedkDistanceToNextChunk);
+        private int GenerateChunkIndex() => Random.Range(0, _chunkBehaviours.Count);
     }
-
-    private int GenerateChunkIndex() => Random.Range(0, _chunkBehaviours.Count);
-
-    private float GenerateDistanceToNextChunk() => Random.Range(minimumChunkRange, maximumChunkRange);
 }

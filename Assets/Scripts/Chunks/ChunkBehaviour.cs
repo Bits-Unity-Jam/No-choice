@@ -22,11 +22,16 @@ namespace Assets.Script.Chunks
             chunkMembers.ForEach(member => member.ResetState());
         }
 
-        public void PlaceAtHighRelateOrigin(Vector3 originPosition, float generatedkDistanceToNextChunk)
+        public void SpawnAtHeight(float height)
         {
             ResetInitialState();
-            transform.position = new Vector3(originPosition.x,
-                originPosition.y + generatedkDistanceToNextChunk, originPosition.z);
+            transform.position = new Vector3(transform.position.x,
+                height, transform.position.z);
+        }
+        public void PlaceAtHeight(float height)
+        {
+            transform.position = new Vector3(transform.position.x,
+                height, transform.position.z);
         }
     }
 }
