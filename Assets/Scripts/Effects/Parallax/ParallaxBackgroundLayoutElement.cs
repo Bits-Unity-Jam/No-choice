@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Effects.Parallax
 {
     [Serializable]
-    public struct ParallaxBackgroundElement
+    public struct ParallaxBackgroundLayoutElement
     {
         [SerializeField] private Transform elementTransform;
 
@@ -14,7 +14,7 @@ namespace Effects.Parallax
 
         [SerializeField, Range(-10, 10)] private float elementRelativeParallaxSpeed;
 
-        public ParallaxBackgroundElement(Transform elementTransform, Vector3 elementInitialPosition, float elementRepeatOffset, float elementRelativeParallaxSpeed)
+        public ParallaxBackgroundLayoutElement(Transform elementTransform, Vector3 elementInitialPosition, float elementRepeatOffset, float elementRelativeParallaxSpeed)
         {
             this.elementTransform = elementTransform;
             this.elementInitialPosition = elementInitialPosition;
