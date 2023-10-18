@@ -1243,28 +1243,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parallaxBackgroundElements:
   - elementTransform: {fileID: 61334805}
-    elementInitialPosition: {x: 0, y: 0, z: 0}
-    elementRepeatOffset: 3.7
+    elementInitialPosition: {x: 0, y: 4.35, z: 0}
+    elementRepeatOffset: 12
     elementRelativeParallaxSpeed: -1
   - elementTransform: {fileID: 1240934965}
-    elementInitialPosition: {x: 0, y: 0, z: 0}
-    elementRepeatOffset: 3.7
+    elementInitialPosition: {x: 0, y: 4.35, z: 0}
+    elementRepeatOffset: 12
     elementRelativeParallaxSpeed: -0.8
   - elementTransform: {fileID: 1060132587}
-    elementInitialPosition: {x: 0, y: 0, z: 0}
-    elementRepeatOffset: 3.7
+    elementInitialPosition: {x: 0, y: 4.35, z: 0}
+    elementRepeatOffset: 12
     elementRelativeParallaxSpeed: -0.6
   - elementTransform: {fileID: 182409000}
-    elementInitialPosition: {x: 0, y: 0, z: 0}
-    elementRepeatOffset: 3.7
+    elementInitialPosition: {x: 0, y: 4.35, z: 0}
+    elementRepeatOffset: 12
     elementRelativeParallaxSpeed: -0.4
   - elementTransform: {fileID: 794372318}
-    elementInitialPosition: {x: 0, y: 0, z: 0}
-    elementRepeatOffset: 3.7
+    elementInitialPosition: {x: 0, y: 4.35, z: 0}
+    elementRepeatOffset: 12
     elementRelativeParallaxSpeed: -0.2
   - elementTransform: {fileID: 1874643903}
-    elementInitialPosition: {x: 0, y: 0, z: 0}
-    elementRepeatOffset: 3.7
+    elementInitialPosition: {x: 0, y: 4.35, z: 0}
+    elementRepeatOffset: 12
     elementRelativeParallaxSpeed: -0.1
   generalMotionSpeed: 1
 --- !u!114 &1939767714 stripped
