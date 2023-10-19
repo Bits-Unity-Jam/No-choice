@@ -812,7 +812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1145cbed2d02ff4d9b3710561380ef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thickness: 20
+  thickness: 5
   notSmoothRadiusPercent: 50
   refillingSpeed: 0.03
   refillingTimeStep: 0.1
