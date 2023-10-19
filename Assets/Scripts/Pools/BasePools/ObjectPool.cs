@@ -1,6 +1,5 @@
 using Mechanics.Pools;
 using Pools.Containers;
-using Pools.Sources;
 using UnityEngine;
 using Zenject;
 
@@ -11,12 +10,12 @@ namespace Pools.BasePools
         [SerializeField] private int poolItemsCount = 10;
 
         [SerializeField] private BaseContainer _container;
-        
-        [SerializeField] private BaseObjectSource<PoolObject> _baseObjectSource;
 
         [SerializeField] private int lastCreatedObjectIndex;
 
         [SerializeField] private bool hasToInjectAtCreation = true;
+
+        [SerializeField, Space] private PoolObject _sourceObject;
 
         private DiContainer _diContainer;
 
@@ -26,10 +25,14 @@ namespace Pools.BasePools
             _diContainer = container;
         }
 
-        private void Awake()
+        private void OnValidate()
         {
-            _container = GetComponent<BaseContainer>();
-            _baseObjectSource = GetComponent<BaseObjectSource<PoolObject>>();
+            InitializePoolData();
+        }
+
+        private void InitializePoolData()
+        {
+            _container ??= GetComponent<BaseContainer>();
         }
 
         private void Start()
@@ -41,7 +44,7 @@ namespace Pools.BasePools
         {
             for (int i = 0; i < poolItemsCount; i++)
             {
-                PoolObject newItem = Instantiate(_baseObjectSource.GetObject(), transform);
+                PoolObject newItem = Instantiate(_sourceObject, transform);
                 if (hasToInjectAtCreation)
                 {
                     _diContainer.InjectGameObject(newItem.gameObject);
