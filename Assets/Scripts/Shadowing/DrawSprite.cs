@@ -32,8 +32,8 @@ public class DrawSprite : MonoBehaviour
 
     private void InitializeTexture()
     {
-        int width = Screen.width / 20;
-        int height = Screen.height / 20;
+        int width = Screen.width/10;
+        int height = Screen.height/10;
         texture = new Texture2D(width, height);
         Color[] pixels = new Color[width * height];
         for (int i = 0; i < pixels.Length; i++)
@@ -49,8 +49,6 @@ public class DrawSprite : MonoBehaviour
     {
         int centerX = (int)position.x;
         int centerY = (int)position.y;
-        float smoothDistance = radius * (notSmoothRadiusPercent / 100.0f);
-        float endDist = radius - smoothDistance;
 
         int startX = Mathf.Clamp(centerX - radius, 0, texture.width - 1);
         int startY = Mathf.Clamp(centerY - radius, 0, texture.height - 1);
@@ -73,21 +71,8 @@ public class DrawSprite : MonoBehaviour
                     {
                         continue;
                     }
-
-                    if (distance >= smoothDistance)
-                    {
-                        float delta = distance - smoothDistance;
-                        float smoothPercentage = delta / endDist;
-                        color.a = smoothPercentage;
-                        if (color.a < colors[y * (endX - startX + 1) + x].a)
-                        {
-                            colors[y * (endX - startX + 1) + x] = color;
-                        }
-                    }
-                    else if (smoothDistance > distance)
-                    {
-                        colors[y * (endX - startX + 1) + x].a = 0;
-                    }
+                    
+                    colors[y * (endX - startX + 1) + x] = color;
                 }
             }
         }
