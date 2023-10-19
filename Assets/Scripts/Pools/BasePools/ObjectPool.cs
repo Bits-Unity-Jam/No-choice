@@ -14,7 +14,7 @@ namespace Pools.BasePools
         
         [SerializeField] private BaseObjectSource<PoolObject> _baseObjectSource;
 
-        [SerializeField] private int index;
+        [SerializeField] private int lastCreatedObjectIndex;
 
         [SerializeField] private bool hasToInjectAtCreation = true;
 
@@ -49,8 +49,8 @@ namespace Pools.BasePools
 
                 newItem.Initialize(this);
                 newItem.PushToPool();
-                newItem.gameObject.name = $"{newItem.gameObject.name} [{index}]";
-                index++;
+                newItem.gameObject.name = $"{newItem.gameObject.name} [{lastCreatedObjectIndex}]";
+                lastCreatedObjectIndex++;
             }
         }
 
