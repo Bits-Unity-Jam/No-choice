@@ -1,5 +1,5 @@
 using System.Collections;
-using Mechanics.Pools;
+using Assets.Scripts.Pools.BasePools;
 using UnityEngine;
 
 namespace BasePools

@@ -1,9 +1,8 @@
-using Mechanics.Pools;
 using Pools.Containers;
 using UnityEngine;
 using Zenject;
 
-namespace Pools.BasePools
+namespace Assets.Scripts.Pools.BasePools
 {
     public sealed class ObjectPool : MonoBehaviour
     {
@@ -60,10 +59,10 @@ namespace Pools.BasePools
         public void PushObject(PoolObject poolObject)
         {
             var poolObjectTransform = poolObject.transform;
-            
+
             poolObjectTransform.parent = transform;
             poolObjectTransform.position = transform.position;
-            
+
             _container.PushObject(poolObject);
         }
 
@@ -76,7 +75,7 @@ namespace Pools.BasePools
 
             return _container.PullObject().Pull();
         }
-        
+
         public PoolObject PullRandomObject()
         {
             if (_container != null && _container.GetLength() <= 1)

@@ -10,7 +10,7 @@ namespace Data
         [SerializeField] private ObstaclePrefabIdCompliance[] _obstaclePrefabIdCompliances;
 
 
-        public ObstaclePrefabIdCompliance GetObstacleWithId(string obstacleId)
+        public ObstaclePrefabIdCompliance GetObstacleWithId(ObstacleId obstacleId)
         {
             ObstaclePrefabIdCompliance databaseItemPath =
                 _obstaclePrefabIdCompliances.FirstOrDefault(compliance => compliance.ObstacleId == obstacleId);

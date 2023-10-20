@@ -6,11 +6,11 @@ namespace Data
     [Serializable]
     public struct ObstaclePrefabIdCompliance
     {
-        [SerializeField] private string obstacleId;
+        [SerializeField] private ObstacleId obstacleId;
 
         [SerializeField] private string prefabPath;
 
-        public string ObstacleId => obstacleId;
+        public ObstacleId ObstacleId => obstacleId;
 
         public string PrefabPath => prefabPath;
     }

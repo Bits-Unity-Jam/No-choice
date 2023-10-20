@@ -2,23 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using BasePools;
 using UnityEngine;
-using Mechanics;
-using Mechanics.Pools;
-using Pools.BasePools;
 
-namespace Mechanics.Pools
+namespace Assets.Scripts.Pools.BasePools
 {
     public class PoolObject : MonoBehaviour
     {
         private ObjectPool _objectPool;
         public void Initialize(ObjectPool objectPool)
         {
-            this._objectPool = objectPool;
+            _objectPool = objectPool;
         }
         public virtual void PushToPool()
         {
             gameObject.SetActive(false);
-            if(_objectPool != null)
+            if (_objectPool != null)
             {
                 _objectPool.PushObject(this);
             }
@@ -26,7 +23,7 @@ namespace Mechanics.Pools
             {
                 Destroy(gameObject);
             }
-            
+
         }
         public virtual PoolObject Pull()
         {
