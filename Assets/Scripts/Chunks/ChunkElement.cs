@@ -1,4 +1,5 @@
 ﻿using Chunks;
+using NaughtyAttributes;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
@@ -13,7 +14,23 @@ namespace Assets.Script.Chunks
         private IActivateable _activateable;
         private IDeactivateable _deactivateable;
 
-        public ChunkElementData ActiveChunkElementData { get => _chunkElementData; set => _chunkElementData = value; }
+        public ChunkElementData ActiveChunkElementData
+        {
+            get
+            {
+                if (_chunkElementData.LocalPosition != default
+                    || _chunkElementData.LocalRotation != default
+                    || _chunkElementData.Scale != default)
+                {
+                    return _chunkElementData;
+                }
+
+                UpdateElementData();
+
+                return _chunkElementData;
+            }
+            set => _chunkElementData = value;
+        }
 
         [Inject]
         private void Construct(IActivateable activateable, IDeactivateable deactivateable)
@@ -37,5 +54,17 @@ namespace Assets.Script.Chunks
         public void Activate() => _activateable.Activate();
 
         public void Deactivate() => _deactivateable.Deactivate();
+
+        [Button]
+        public void UpdateElementData()
+        {
+            _chunkElementData = new ChunkElementData()
+            {
+                ObstacleId = _chunkElementData.ObstacleId,
+                LocalPosition = transform.localPosition,
+                LocalRotation = transform.localRotation,
+                Scale = transform.localScale
+            };
+        }
     }
 }

@@ -11,13 +11,19 @@ namespace Chunks
     [Serializable]
     public struct ChunkElementData
     {
-        [SerializeField] private ObstacleId _obstacleId;
+        
+        [SerializeField, Header("[Have to choose the obstacle type ID to correct data saving!]")] private ObstacleId _obstacleId;
 
-        [SerializeField] private Vector3 _localPosition;
+        [Header("[Readonly debug information below!]")]
 
-        [SerializeField] private Quaternion _localRotation;
+        [SerializeField]
+        private Vector3 _localPosition;
 
-        [SerializeField] private Vector3 _scale;
+        [SerializeField]
+        private Quaternion _localRotation;
+
+        [SerializeField]
+        private Vector3 _scale;
 
         public ChunkElementData(Vector3 scale, Quaternion localRotation, Vector3 localPosition, ObstacleId obstacleId) : this()
         {
