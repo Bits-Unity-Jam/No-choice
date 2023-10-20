@@ -3,7 +3,7 @@ using Zenject;
 
 namespace Assets.Scripts.Chunks
 {
-    public class BaseInstaller<T> : MonoInstaller
+    public class BaseBindFromMethodInstaller<T> : MonoInstaller
     {
         //the game object which contains <T>
         [SerializeField]
@@ -17,4 +17,5 @@ namespace Assets.Scripts.Chunks
                 FromMethod(() => targetImplementation.GetComponent<T>()).
                 AsSingle().NonLazy();
     }
+
 }

@@ -2,5 +2,5 @@
 
 namespace Assets.Scripts.Chunks
 {
-    public class DeactivateableInstaller : BaseInstaller<IDeactivateable> { }
+    public class DeactivateableInstaller : BaseBindFromMethodInstaller<IDeactivateable> { }
 }

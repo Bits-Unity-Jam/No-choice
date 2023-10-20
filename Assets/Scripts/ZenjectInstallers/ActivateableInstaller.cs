@@ -2,5 +2,5 @@
 
 namespace Assets.Scripts.Chunks
 {
-    public class ActivateableInstaller : BaseInstaller<IActivateable> { }
+    public class ActivateableInstaller : BaseBindFromMethodInstaller<IActivateable> { }
 }

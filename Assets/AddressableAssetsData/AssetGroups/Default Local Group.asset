@@ -17,28 +17,28 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 580cc998998a11d4ca077d8d1ec94eb0
   m_SerializeEntries:
-  - m_GUID: 75a9d3b6772c425438abc7914c6ab44e
-    m_Address: Assets/Prefabs/Enemy/New/Calibr.prefab
+  - m_GUID: 35505456668b08242b08b4a796f2141b
+    m_Address: Assets/Prefabs/Obstacles/New/Soldier.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 64985f082955a89478659ae557798722
-    m_Address: Assets/Prefabs/Enemy/New/Drone.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d8e014841026ca44384e595ecf896f28
-    m_Address: Assets/Prefabs/Enemy/New/Helicopter.prefab
+    m_Address: Assets/Prefabs/Obstacles/New/Drone.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 28fe0b5c59983524ab26f6c82e257db0
-    m_Address: Assets/Prefabs/Enemy/New/Rocket.prefab
+    m_Address: Assets/Prefabs/Obstacles/New/Rocket.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 35505456668b08242b08b4a796f2141b
-    m_Address: Assets/Prefabs/Enemy/New/Soldier.prefab
+  - m_GUID: 75a9d3b6772c425438abc7914c6ab44e
+    m_Address: Assets/Prefabs/Obstacles/New/Calibr.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8e014841026ca44384e595ecf896f28
+    m_Address: Assets/Prefabs/Obstacles/New/Helicopter.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

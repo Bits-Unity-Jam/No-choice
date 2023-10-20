@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca7b555e5c6e453ea9e4fa62d8b03f7b, type: 3}
   m_Name: ObstacleIdPrefabDatabase
   m_EditorClassIdentifier: 
-  _obstaclePrefabIdCompliances: []
+  _obstaclePrefabIdCompliances:
+  - obstacleId: 4
+    prefabPath: Assets/Prefabs/Obstacles/New/Soldier.prefab

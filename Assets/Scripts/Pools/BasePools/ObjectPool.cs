@@ -1,3 +1,4 @@
+using DataStructures.Sourses;
 using Pools.Containers;
 using UnityEngine;
 using Zenject;
@@ -14,7 +15,7 @@ namespace Assets.Scripts.Pools.BasePools
 
         [SerializeField] private bool hasToInjectAtCreation = true;
 
-        [SerializeField, Space] private PoolObject _sourceObject;
+        [SerializeField, Space] private BaseObjectSource<PoolObject> _sourceObject;
 
         private DiContainer _diContainer;
 
@@ -39,11 +40,13 @@ namespace Assets.Scripts.Pools.BasePools
             InstantiateItems();
         }
 
-        private void InstantiateItems()
+        private async void InstantiateItems()
         {
             for (int i = 0; i < poolItemsCount; i++)
             {
-                PoolObject newItem = Instantiate(_sourceObject, transform);
+                var objectToCreate = await _sourceObject.GetObjectAsync();
+
+                PoolObject newItem = Instantiate(objectToCreate, transform);
                 if (hasToInjectAtCreation)
                 {
                     _diContainer.InjectGameObject(newItem.gameObject);
