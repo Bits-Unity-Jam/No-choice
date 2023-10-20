@@ -9,17 +9,17 @@ namespace Assets.Script.Chunks
     public class ChunkBehaviour : MonoBehaviour
     {
         [SerializeField]
-        private List<ChunkMember> chunkMembers;
+        private List<ChunkElement> chunkMembers;
 
         private void OnValidate()
         {
-            chunkMembers ??= GetComponentsInChildren<ChunkMember>().ToList();
+            chunkMembers ??= GetComponentsInChildren<ChunkElement>().ToList();
         }
 
         public void ResetInitialState()
         {
             gameObject.SetActive(true);
-            chunkMembers.ForEach(member => member.ResetState());
+            chunkMembers.ForEach(member => member.Deactivate());
         }
 
         public void SpawnAtHeight(float height)
