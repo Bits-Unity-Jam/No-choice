@@ -2,6 +2,7 @@ using Game.Energy;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Game.UI.Popups;
 using UnityEngine;
 
 public class GameStageController : MonoBehaviour
@@ -22,20 +23,30 @@ public class GameStageController : MonoBehaviour
     private List<GameObject> objectsToHideInMenu;
     [SerializeField]
     private List<GameObject> objectsToHideInGame;
+    [SerializeField]
+    private CanvasElementSequenceActivatingTween  _elementSequenceActivatingTween;
 
     private void Awake()
-    {
+    {  
+        _elementSequenceActivatingTween.DoDeactivateImmediately();
         _pointerCatcher.OnPointerDownCaught += HandlePointerDownCaught;
         constantMove.Speed = 0;
         objectsToHideInMenu.ForEach(obj => obj.SetActive(false));
+    }
+
+    private void Start()
+    {
+        
+        _elementSequenceActivatingTween.DoActivate();
     }
 
     private void HandlePointerDownCaught()
     {
         if (_isGameStarted) { return; }
 
+        _elementSequenceActivatingTween.DoDeactivate();
         objectsToHideInMenu.ForEach(obj => obj.SetActive(true));
-        objectsToHideInGame.ForEach(obj => obj.SetActive(false));
+        //objectsToHideInGame.ForEach(obj => obj.SetActive(false));
         constantMove.Speed = constantMove.DefaultSpeed;
         _isGameStarted = true;
         energyController.StartTimer();

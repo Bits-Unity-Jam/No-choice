@@ -261,7 +261,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9004396569680836460}
-  - component: {fileID: 305982513140252542}
   m_Layer: 0
   m_Name: bg Clouds1 group
   m_TagString: Untagged
@@ -278,7 +277,7 @@ Transform:
   m_GameObject: {fileID: 1608715536993229514}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.58, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -286,21 +285,6 @@ Transform:
   - {fileID: 8783151600959580600}
   m_Father: {fileID: 403179580165589553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &305982513140252542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608715536993229514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 459e7491eca4eca4d98fbeb557c11aeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxSpeed: -0.4
-  repeatOffset: 2.5
-  cameraTransform: {fileID: 0}
 --- !u!1 &1692433176405073760
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +378,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2785703285211564668}
-  - component: {fileID: 2649487437309178208}
   m_Layer: 0
   m_Name: Clouds 2 group
   m_TagString: Untagged
@@ -411,7 +394,7 @@ Transform:
   m_GameObject: {fileID: 1813298398004784679}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.51, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -419,21 +402,6 @@ Transform:
   - {fileID: 6704564301015732772}
   m_Father: {fileID: 403179580165589553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2649487437309178208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1813298398004784679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 459e7491eca4eca4d98fbeb557c11aeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxSpeed: -0.8
-  repeatOffset: 3.7
-  cameraTransform: {fileID: 0}
 --- !u!1 &3339434172969773116
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,7 +411,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2916795102796265741}
-  - component: {fileID: 6781998618037945400}
   m_Layer: 0
   m_Name: Clouds 1 group
   m_TagString: Untagged
@@ -460,7 +427,7 @@ Transform:
   m_GameObject: {fileID: 3339434172969773116}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.26, z: 0}
+  m_LocalPosition: {x: -0.29, y: -1.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -468,21 +435,6 @@ Transform:
   - {fileID: 4365476930153588620}
   m_Father: {fileID: 403179580165589553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6781998618037945400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3339434172969773116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 459e7491eca4eca4d98fbeb557c11aeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxSpeed: -1
-  repeatOffset: 3.7
-  cameraTransform: {fileID: 0}
 --- !u!1 &3747937912674153436
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,7 +612,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1834570941491459006}
-  - component: {fileID: 6397192072841181433}
   m_Layer: 0
   m_Name: bg Clouds2 group
   m_TagString: Untagged
@@ -677,7 +628,7 @@ Transform:
   m_GameObject: {fileID: 4739867197899735347}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.72, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -685,21 +636,6 @@ Transform:
   - {fileID: 8798825240426009959}
   m_Father: {fileID: 403179580165589553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6397192072841181433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4739867197899735347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 459e7491eca4eca4d98fbeb557c11aeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxSpeed: -0.2
-  repeatOffset: 3.7
-  cameraTransform: {fileID: 0}
 --- !u!1 &5036266729795281502
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,7 +645,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7344515971499268967}
-  - component: {fileID: 2172994151017256227}
   m_Layer: 0
   m_Name: bg Clouds3 group
   m_TagString: Untagged
@@ -726,7 +661,7 @@ Transform:
   m_GameObject: {fileID: 5036266729795281502}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.51, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -734,21 +669,6 @@ Transform:
   - {fileID: 6021787487334612331}
   m_Father: {fileID: 403179580165589553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2172994151017256227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5036266729795281502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 459e7491eca4eca4d98fbeb557c11aeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxSpeed: -0.1
-  repeatOffset: 3.7
-  cameraTransform: {fileID: 0}
 --- !u!1 &5172989364294507204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,7 +1182,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4651436027041071819}
-  - component: {fileID: 4690711133023177093}
   m_Layer: 0
   m_Name: Clouds 3 group
   m_TagString: Untagged
@@ -1279,7 +1198,7 @@ Transform:
   m_GameObject: {fileID: 7595288552876884552}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.51, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1287,21 +1206,6 @@ Transform:
   - {fileID: 287969251145033375}
   m_Father: {fileID: 403179580165589553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4690711133023177093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7595288552876884552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 459e7491eca4eca4d98fbeb557c11aeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxSpeed: -0.6
-  repeatOffset: 3.7
-  cameraTransform: {fileID: 0}
 --- !u!1 &7637536220615907721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,6 +1215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 403179580165589553}
+  - component: {fileID: 7483475538469527364}
   m_Layer: 0
   m_Name: BG
   m_TagString: Untagged
@@ -1326,7 +1231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7637536220615907721}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.592382, y: 38.985935, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1340,6 +1245,44 @@ Transform:
   - {fileID: 5838158781942089031}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7483475538469527364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7637536220615907721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68d9e95be81d4c5fa1515630b1f0fb84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxBackgroundElements:
+  - elementTransform: {fileID: 2916795102796265741}
+    elementInitialPosition: {x: 0, y: 0, z: 0}
+    elementRepeatOffset: 3.7
+    elementRelativeParallaxSpeed: -1
+  - elementTransform: {fileID: 2785703285211564668}
+    elementInitialPosition: {x: 0, y: 0, z: 0}
+    elementRepeatOffset: 3.7
+    elementRelativeParallaxSpeed: -0.8
+  - elementTransform: {fileID: 4651436027041071819}
+    elementInitialPosition: {x: 0, y: 0, z: 0}
+    elementRepeatOffset: 3.7
+    elementRelativeParallaxSpeed: -0.6
+  - elementTransform: {fileID: 9004396569680836460}
+    elementInitialPosition: {x: 0, y: 0, z: 0}
+    elementRepeatOffset: 3.7
+    elementRelativeParallaxSpeed: -0.4
+  - elementTransform: {fileID: 1834570941491459006}
+    elementInitialPosition: {x: 0, y: 0, z: 0}
+    elementRepeatOffset: 3.7
+    elementRelativeParallaxSpeed: -0.2
+  - elementTransform: {fileID: 7344515971499268967}
+    elementInitialPosition: {x: 0, y: 0, z: 0}
+    elementRepeatOffset: 3.7
+    elementRelativeParallaxSpeed: -0.1
+  generalMotionSpeed: 1
 --- !u!1 &8820100815929790048
 GameObject:
   m_ObjectHideFlags: 0
