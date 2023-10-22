@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Zenject;
 
@@ -5,6 +6,8 @@ namespace Chunks.ChunkRedactor
 {
     public class ObstacleCreator : MonoBehaviour
     {
+        [SerializeField] private Transform _createdObjectsParentTransform;
+        
         private IFactory<ObstacleId, Obstacle> _obstacleFactory;
         
         [Inject]
@@ -15,7 +18,13 @@ namespace Chunks.ChunkRedactor
         
         public Obstacle Create(ObstacleId obstacleId)
         {
-            return _obstacleFactory.Create(obstacleId);
+            Obstacle created = _obstacleFactory.Create(obstacleId);
+            created.ReturnToDefaultState();
+            created.transform.parent = _createdObjectsParentTransform;
+            created.transform.localPosition = Vector3.zero;
+            created.name = Enum.GetNames(typeof(ObstacleId))[(int)obstacleId];
+
+            return created;
         }
     }
 }

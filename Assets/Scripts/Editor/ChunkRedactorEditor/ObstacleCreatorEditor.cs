@@ -10,6 +10,8 @@ namespace Editor.ChunkRedactorEditor
     {
         public override void OnInspectorGUI()
         {
+            DrawDefaultInspector();
+            
             ObstacleCreator obstacleCreator = target as ObstacleCreator;
             
             int obstacleCount = Enum.GetNames(typeof(ObstacleId)).Length;
