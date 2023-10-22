@@ -37,12 +37,12 @@ namespace Assets.Scripts.Pools.BasePools
 
         private void Start()
         {
-            InstantiateItems();
+            InstantiateItems(poolItemsCount);
         }
 
-        private async void InstantiateItems()
+        private async void InstantiateItems(int count = 5)
         {
-            for (int i = 0; i < poolItemsCount; i++)
+            for (int i = 0; i < count; i++)
             {
                 var objectToCreate = await _sourceObject.GetObjectAsync();
 
@@ -73,7 +73,7 @@ namespace Assets.Scripts.Pools.BasePools
         {
             if (_container != null && _container.GetLength() <= 1)
             {
-                InstantiateItems();
+                InstantiateItems(poolItemsCount);
             }
 
             return _container.PullObject().Pull();
