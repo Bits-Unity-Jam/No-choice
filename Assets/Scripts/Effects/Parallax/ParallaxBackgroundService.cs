@@ -5,29 +5,29 @@ namespace Effects.Parallax
 {
     public class ParallaxBackgroundService : MonoBehaviour
     {
-        [SerializeField] private List<ParallaxBackgroundElement> parallaxBackgroundElements;
+        [SerializeField] private List<ParallaxBackgroundLayoutElement> parallaxBackgroundElements;
 
         [SerializeField] private float generalMotionSpeed = 1;
 
         void LateUpdate() => parallaxBackgroundElements.ForEach(HandleParallaxElementBehavior);
 
-        private void HandleParallaxElementBehavior(ParallaxBackgroundElement element)
+        private void HandleParallaxElementBehavior(ParallaxBackgroundLayoutElement layoutElement)
         {
             float deltaY = generalMotionSpeed * Time.deltaTime;
 
             // Move the layer based on parallax speed
-            Vector3 newPosition = element.ElementTransform.localPosition + Vector3.up * deltaY * element.ElementRelativeParallaxSpeed;
-            element.ElementTransform.localPosition = newPosition;
+            Vector3 newPosition = layoutElement.ElementTransform.localPosition + Vector3.up * deltaY * layoutElement.ElementRelativeParallaxSpeed;
+            layoutElement.ElementTransform.localPosition = newPosition;
 
             // Check if the layer has moved out of the screen
-            if (Mathf.Abs(element.ElementTransform.localPosition.y - element.ElementInitialPosition.y) >= element.ElementRepeatOffset)
+            if (Mathf.Abs(layoutElement.ElementTransform.localPosition.y - layoutElement.ElementInitialPosition.y) >= layoutElement.ElementRepeatOffset)
             {
                 // Move the layer back to its initial position
-                var newLocalPosition = element.ElementTransform.localPosition;
+                var newLocalPosition = layoutElement.ElementTransform.localPosition;
                 newLocalPosition =
-                    new Vector3(newLocalPosition.x, element.ElementInitialPosition.y, newLocalPosition.z);
+                    new Vector3(newLocalPosition.x, layoutElement.ElementInitialPosition.y, newLocalPosition.z);
             
-                element.ElementTransform.localPosition = newLocalPosition;
+                layoutElement.ElementTransform.localPosition = newLocalPosition;
             }
         }
     }
