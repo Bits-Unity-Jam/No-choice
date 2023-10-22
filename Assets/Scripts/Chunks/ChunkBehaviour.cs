@@ -9,24 +9,29 @@ namespace Assets.Script.Chunks
     public class ChunkBehaviour : MonoBehaviour
     {
         [SerializeField]
-        private List<ChunkMember> chunkMembers;
+        private List<ChunkElement> chunkMembers;
 
         private void OnValidate()
         {
-            chunkMembers ??= GetComponentsInChildren<ChunkMember>().ToList();
+            chunkMembers ??= GetComponentsInChildren<ChunkElement>().ToList();
         }
 
         public void ResetInitialState()
         {
             gameObject.SetActive(true);
-            chunkMembers.ForEach(member => member.ResetState());
+            chunkMembers.ForEach(member => member.Deactivate());
         }
 
-        public void PlaceAtHighRelateOrigin(Vector3 originPosition, float generatedkDistanceToNextChunk)
+        public void SpawnAtHeight(float height)
         {
             ResetInitialState();
-            transform.position = new Vector3(originPosition.x,
-                originPosition.y + generatedkDistanceToNextChunk, originPosition.z);
+            transform.position = new Vector3(transform.position.x,
+                height, transform.position.z);
+        }
+        public void PlaceAtHeight(float height)
+        {
+            transform.position = new Vector3(transform.position.x,
+                height, transform.position.z);
         }
     }
 }

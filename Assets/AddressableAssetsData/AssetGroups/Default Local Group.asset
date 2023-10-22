@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 580cc998998a11d4ca077d8d1ec94eb0
+  m_SerializeEntries:
+  - m_GUID: 35505456668b08242b08b4a796f2141b
+    m_Address: Assets/Prefabs/Obstacles/New/Soldier.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 64985f082955a89478659ae557798722
+    m_Address: Assets/Prefabs/Obstacles/New/Drone.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28fe0b5c59983524ab26f6c82e257db0
+    m_Address: Assets/Prefabs/Obstacles/New/Rocket.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 75a9d3b6772c425438abc7914c6ab44e
+    m_Address: Assets/Prefabs/Obstacles/New/Calibr.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8e014841026ca44384e595ecf896f28
+    m_Address: Assets/Prefabs/Obstacles/New/Helicopter.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 9bb4d2c72a2ca3e49913c4765084a325, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a05b8dbda080e0a4ca2556a55ead6479, type: 2}
+    - {fileID: 11400000, guid: 08b33d2ebf4654641a2e38d2546ba749, type: 2}
