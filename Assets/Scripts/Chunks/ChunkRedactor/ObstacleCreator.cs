@@ -1,12 +1,21 @@
 using UnityEngine;
+using Zenject;
 
 namespace Chunks.ChunkRedactor
 {
     public class ObstacleCreator : MonoBehaviour
     {
-        public void Create(ObstacleId obstacleId)
+        private IFactory<ObstacleId, Obstacle> _obstacleFactory;
+        
+        [Inject]
+        private void Construct(IFactory<ObstacleId, Obstacle> obstacleFactory)
         {
-            throw new System.NotImplementedException();
+            _obstacleFactory = obstacleFactory;
+        }
+        
+        public Obstacle Create(ObstacleId obstacleId)
+        {
+            return _obstacleFactory.Create(obstacleId);
         }
     }
 }
