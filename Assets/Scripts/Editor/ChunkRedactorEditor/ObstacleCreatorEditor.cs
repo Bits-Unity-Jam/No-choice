@@ -45,7 +45,7 @@ namespace Editor.ChunkRedactorEditor
         }
     }
     
-    [CustomEditor(typeof(ChunkBuilder))]
+    [CustomEditor(typeof(ChunkKeeper))]
     public class ChunkBuilderEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
@@ -53,7 +53,7 @@ namespace Editor.ChunkRedactorEditor
             DrawDefaultInspector();
             
             GUILayout.Space(20f);
-            ChunkBuilder obstacleCreator = target as ChunkBuilder;
+            ChunkKeeper obstacleCreator = target as ChunkKeeper;
             
             GUILayout.BeginHorizontal();
             GUI.backgroundColor = Color.green;

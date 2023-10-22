@@ -6,7 +6,7 @@ using Zenject;
 
 namespace Chunks.ChunkRedactor
 {
-    [RequireComponent(typeof(ChunkBuilder))]
+    [RequireComponent(typeof(ChunkKeeper))]
     public class ObstacleCreator : MonoBehaviour
     {
         [SerializeField] private Transform _createdObjectsParentTransform;
@@ -24,13 +24,11 @@ namespace Chunks.ChunkRedactor
         public Obstacle Create(ObstacleId obstacleId)
         {
 #if UNITY_EDITOR
-            
             if (!Application.isPlaying)
             {
                 Debug.LogError("The application isn't running! Please start the game before trying to create objects!");
                 return default;
             }
-    
 #endif        
             Obstacle created = _obstacleFactory.Create(obstacleId);
             created.ReturnToDefaultState();
@@ -41,6 +39,15 @@ namespace Chunks.ChunkRedactor
             return created;
         }
 
+        public Obstacle Create(ObstacleData obstacleData)
+        {
+            Obstacle created = Create(obstacleData.ObstacleId);
+
+            created.ApplyData(obstacleData);
+            
+            return created;
+        }
+        
         public void Clear()
         {
             _createdObstacles.ForEach(obstacle => obstacle.GetComponent<PoolObject>().PushToPool());

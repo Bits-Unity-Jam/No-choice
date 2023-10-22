@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DataStorage;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Zenject;
@@ -14,7 +15,7 @@ namespace Chunks.ChunkRedactor
         
         [FormerlySerializedAs("_chunkObstacleDatas")] [SerializeField]
         private List<ObstacleData> chunkObstaclesData;
-        
+
         public int ChunkIndex
         {
             get => _chunkIndex;
@@ -30,7 +31,7 @@ namespace Chunks.ChunkRedactor
     }
     
     [RequireComponent(typeof(ObstacleCreator))]
-    public class ChunkBuilder : MonoBehaviour
+    public class ChunkKeeper : MonoBehaviour
     {
         [SerializeField] private Transform _createdObjectsParentTransform;
         [SerializeField] private ObstacleCreator _obstacleCreator;
@@ -38,13 +39,15 @@ namespace Chunks.ChunkRedactor
         private List<Obstacle> _foundObstacle;
         private List<ObstacleData> _foundObstacleDatas;
         private ISerializer _serializer;
+        private IStorage _storage;
 
         [Space, SerializeField, Header("Index to save/load the chunk:")] private int _chunkIndex;
 
         [Inject]
-        private void Construct(ISerializer serializer)
+        private void Construct(ISerializer serializer,  IStorage storage)
         {
             _serializer = serializer;
+            _storage = storage;
         }
         
         private void OnValidate()
@@ -71,11 +74,19 @@ namespace Chunks.ChunkRedactor
                 { ChunkIndex = _chunkIndex, ChunkObstaclesData = _foundObstacleDatas };
 
             string serialized = _serializer.Serialize(chunkData);
-            
+           
+            _storage.SaveAs(serialized, $"/Resources/Chunks/Level_{_chunkIndex}"); 
         }
 
         public void Load()
         {
+            _obstacleCreator.Clear();
+            
+            string loadedChunkDataString  = _storage.Load($"Levels/Level_{_chunkIndex}");
+
+            ChunkData loadedChunkData = _serializer.Deserialize<ChunkData>(loadedChunkDataString);
+            
+            loadedChunkData.ChunkObstaclesData.ForEach(obstacle => _obstacleCreator.Create(obstacle));
         }
     }
 }

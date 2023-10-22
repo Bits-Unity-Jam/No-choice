@@ -374,8 +374,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d707195efee945c2aa03a2933d9838a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chunkIndex: 0
   _createdObjectsParentTransform: {fileID: 1740249358}
+  _obstacleCreator: {fileID: 28428630}
+  _chunkIndex: 0
 --- !u!1 &40486798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1877,7 +1878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1740249358}
   m_Layer: 0
-  m_Name: CreatedObjects
+  m_Name: CreatedObjectsParentTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
