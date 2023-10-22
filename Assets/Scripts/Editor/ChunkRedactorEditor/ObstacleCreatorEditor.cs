@@ -10,11 +10,16 @@ namespace Editor.ChunkRedactorEditor
     {
         public override void OnInspectorGUI()
         {
+            ObstacleCreator obstacleCreator = target as ObstacleCreator;
+            
             int obstacleCount = Enum.GetNames(typeof(ObstacleId)).Length;
+            
             for (int i = 0; i < obstacleCount; i++)
             {
                 if (GUILayout.Button($"Add {Enum.GetNames(typeof(ObstacleId))[i]}"))
-                    Debug.Log("It's alive: " + target.name);
+                {
+                    obstacleCreator.Create((ObstacleId)i);
+                }
             }
         }
     }
