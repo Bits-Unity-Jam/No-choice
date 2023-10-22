@@ -9,7 +9,7 @@ public enum ObstacleId
 namespace Chunks
 {
     [Serializable]
-    public struct ChunkElementData
+    public struct ObstacleData
     {
         
         [SerializeField, Header("[Have to choose the obstacle type ID to correct data saving!]")] private ObstacleId _obstacleId;
@@ -25,7 +25,7 @@ namespace Chunks
         [SerializeField]
         private Vector3 _scale;
 
-        public ChunkElementData(Vector3 scale, Quaternion localRotation, Vector3 localPosition, ObstacleId obstacleId) : this()
+        public ObstacleData(Vector3 scale, Quaternion localRotation, Vector3 localPosition, ObstacleId obstacleId) : this()
         {
             _scale = scale;
             _localRotation = localRotation;

@@ -1,13 +1,20 @@
 using Assets.Script.Chunks;
+using Chunks;
+using UnityEngine;
 using Zenject;
 
 namespace Factories.FactoryImplementations
 {
-    public class ObstacleFactory : IFactory<ObstacleId, ChunkElement>
+    public class ObstacleFactory : IFactory<ObstacleId, Obstacle>
     {
-        public ChunkElement Create(ObstacleId param)
+        public Obstacle Create(ObstacleId param)
         {
             throw new System.NotImplementedException();
         }
+    }
+
+    public class ObstaclePoolingService : MonoBehaviour
+    {
+        
     }
 }
