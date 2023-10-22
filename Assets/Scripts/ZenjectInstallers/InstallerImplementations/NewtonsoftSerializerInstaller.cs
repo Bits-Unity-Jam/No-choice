@@ -2,7 +2,7 @@ using Zenject;
 
 namespace ZenjectInstallers.InstallerImplementations
 {
-    public class SerializerInstaller : MonoInstaller
+    public class NewtonsoftSerializerInstaller : MonoInstaller
     {
         public override void InstallBindings()
         {
