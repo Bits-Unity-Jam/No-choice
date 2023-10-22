@@ -38,6 +38,8 @@ namespace Editor.ChunkRedactorEditor
             }
             GUILayout.EndHorizontal();
             
+            GUILayout.Space(20f);
+            
             GUI.backgroundColor = starColor;
             DrawDefaultInspector();
         }
@@ -50,6 +52,7 @@ namespace Editor.ChunkRedactorEditor
         {
             DrawDefaultInspector();
             
+            GUILayout.Space(20f);
             ChunkBuilder obstacleCreator = target as ChunkBuilder;
             
             GUILayout.BeginHorizontal();
