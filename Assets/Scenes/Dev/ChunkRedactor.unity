@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 28428631}
   - component: {fileID: 28428630}
   m_Layer: 0
-  m_Name: ChunkRedactor
+  m_Name: ChunkCreator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -813,7 +813,7 @@ GameObject:
   m_Layer: 0
   m_Name: FirstChunkPlaceholder
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -826,7 +826,7 @@ Transform:
   m_GameObject: {fileID: 326544882}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 18.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -842,6 +842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 434466517}
   - component: {fileID: 434466518}
+  - component: {fileID: 434466519}
   m_Layer: 0
   m_Name: ChunkLocomotionService
   m_TagString: Untagged
@@ -883,6 +884,32 @@ MonoBehaviour:
   - {fileID: 326544883}
   - {fileID: 1507155484}
   - {fileID: 1970713834}
+--- !u!114 &434466519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434466516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68d9e95be81d4c5fa1515630b1f0fb84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elements:
+  - elementTransform: {fileID: 326544883}
+    elementInitialPosition: {x: 0, y: 18.3, z: 0}
+    elementRepeatOffset: 25
+    elementRelativeSpeed: -1
+  - elementTransform: {fileID: 1507155484}
+    elementInitialPosition: {x: 0, y: 18.3, z: 0}
+    elementRepeatOffset: 25
+    elementRelativeSpeed: -1
+  - elementTransform: {fileID: 1970713834}
+    elementInitialPosition: {x: 0, y: 18.3, z: 0}
+    elementRepeatOffset: 25
+    elementRelativeSpeed: -1
+  generalMotionSpeed: 1
 --- !u!1 &510125134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,7 +1538,7 @@ GameObject:
   m_Layer: 0
   m_Name: SecondChunkPlaceholder
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1524,7 +1551,7 @@ Transform:
   m_GameObject: {fileID: 1507155483}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 18.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1747,7 +1774,7 @@ GameObject:
   m_Layer: 0
   m_Name: ThirdChunkPlaceholder
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1760,7 +1787,7 @@ Transform:
   m_GameObject: {fileID: 1970713833}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 18.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

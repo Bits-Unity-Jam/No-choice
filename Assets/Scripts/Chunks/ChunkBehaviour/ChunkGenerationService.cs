@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Chunks.ChunkBehaviour
 {
-    public class ChunkLocomotionService : MonoBehaviour
+    public class ChunkGenerationService : MonoBehaviour
     {
         [SerializeField] private Transform[] _chunkPlaceholders;
     }

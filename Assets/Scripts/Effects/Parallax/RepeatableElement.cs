@@ -1,10 +1,11 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Effects.Parallax
 {
     [Serializable]
-    public struct ParallaxBackgroundLayoutElement
+    public struct RepeatableElement
     {
         [SerializeField] private Transform elementTransform;
 
@@ -12,14 +13,14 @@ namespace Effects.Parallax
 
         [SerializeField] private float elementRepeatOffset;
 
-        [SerializeField, Range(-10, 10)] private float elementRelativeParallaxSpeed;
+        [FormerlySerializedAs("elementRelativeParallaxSpeed")] [SerializeField, Range(-10, 10)] private float elementRelativeSpeed;
 
-        public ParallaxBackgroundLayoutElement(Transform elementTransform, Vector3 elementInitialPosition, float elementRepeatOffset, float elementRelativeParallaxSpeed)
+        public RepeatableElement(Transform elementTransform, Vector3 elementInitialPosition, float elementRepeatOffset, float elementRelativeSpeed)
         {
             this.elementTransform = elementTransform;
             this.elementInitialPosition = elementInitialPosition;
             this.elementRepeatOffset = elementRepeatOffset;
-            this.elementRelativeParallaxSpeed = elementRelativeParallaxSpeed;
+            this.elementRelativeSpeed = elementRelativeSpeed;
         }
 
         public Transform ElementTransform
@@ -42,8 +43,8 @@ namespace Effects.Parallax
 
         public float ElementRelativeParallaxSpeed
         {
-            get => elementRelativeParallaxSpeed;
-            set => elementRelativeParallaxSpeed = value;
+            get => elementRelativeSpeed;
+            set => elementRelativeSpeed = value;
         }
 
     }
