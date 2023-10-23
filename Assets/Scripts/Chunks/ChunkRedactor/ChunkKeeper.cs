@@ -29,6 +29,7 @@ namespace Chunks.ChunkRedactor
         }
         
     }
+
     
     [RequireComponent(typeof(ObstacleCreator))]
     public class ChunkKeeper : MonoBehaviour
@@ -79,15 +80,22 @@ namespace Chunks.ChunkRedactor
             _storage.SaveAs(serialized, $"/Resources/Chunks/Level_{_chunkIndex}"); 
         }
 
-        public void Load()
+        public List<Obstacle> Load() => Load(_chunkIndex);
+
+        public List<Obstacle> Load(int chunkIndex)
         {
             _obstacleCreator.Clear();
             
-            string loadedChunkDataString  = _storage.Load($"/Resources/Chunks/Level_{_chunkIndex}");
+            string loadedChunkDataString  = _storage.Load($"/Resources/Chunks/Level_{chunkIndex}");
 
             ChunkData loadedChunkData = _serializer.Deserialize<ChunkData>(loadedChunkDataString);
+
+            List<Obstacle> createdObstacles = new();
             
-            loadedChunkData.ChunkObstaclesData.ForEach(obstacle => _obstacleCreator.Create(obstacle));
+            loadedChunkData.ChunkObstaclesData.ForEach(obstacle =>
+               createdObstacles.Add(_obstacleCreator.Create(obstacle)));
+            
+            return createdObstacles;
         }
     }
 }
