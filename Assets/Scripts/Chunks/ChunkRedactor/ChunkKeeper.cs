@@ -46,7 +46,7 @@ namespace Chunks.ChunkRedactor
 
         [Space, SerializeField, Header("Index to save/load the chunk:")] private int _chunkIndex;
 
-        public int ChunksNumber => Directory.GetFiles(CHUNK_SAVE_PATH).Length;
+        public int ChunksNumber => Directory.GetFiles(Application.dataPath + CHUNK_SAVE_PATH).Length;
         
         [Inject]
         private void Construct(ISerializer serializer,  IStorage storage)

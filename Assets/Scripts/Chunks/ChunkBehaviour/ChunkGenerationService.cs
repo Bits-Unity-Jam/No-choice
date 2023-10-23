@@ -5,6 +5,7 @@ using Effects.Parallax;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Zenject;
+using Random = UnityEngine.Random;
 
 namespace Chunks.ChunkBehaviour
 {
@@ -16,11 +17,11 @@ namespace Chunks.ChunkBehaviour
 
         [SerializeField] private ChunkKeeper _chunkKeeper;
 
-        [Inject]
-        private void Construct(ChunkKeeper chunkKeeper)
-        {
-            _chunkKeeper = chunkKeeper;
-        }
+        // [Inject]
+        // private void Construct(ChunkKeeper chunkKeeper)
+        // {
+        //     _chunkKeeper = chunkKeeper;
+        // }
         
         private void OnValidate()
         {
@@ -38,12 +39,16 @@ namespace Chunks.ChunkBehaviour
 
             List<Obstacle> loadedNextChunk = _chunkKeeper.Load(nextChunkIndex);
             
-            //loadedNextChunk.
+            foreach (var obstacle in loadedNextChunk)
+            {
+                obstacle.transform.parent = obj.ElementTransform;
+                obstacle.transform.localPosition = obstacle.ObstacleDataWithoutUpdate.LocalPosition.ConvertToVector3();
+            }
         }
 
         private int GetNextChunkIndex()
         {
-            
+            return Random.Range(0, 5);
         }
     }
 }

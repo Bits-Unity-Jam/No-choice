@@ -27,6 +27,11 @@ namespace Chunks
             }
             set => obstacleData = value;
         }
+        public ObstacleData ObstacleDataWithoutUpdate
+        {
+            get => obstacleData;
+            set => obstacleData = value;
+        }
 
         [Inject]
         private void Construct(IActivateable activateable, IDeactivateable deactivateable, IDefaultStateReturner defaultStateReturner)
