@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Drone
       objectReference: {fileID: 0}
+    - target: {fileID: 8907570937282491213, guid: 2f4a3c76decc6d0469042834c56a3c4b, type: 3}
+      propertyPath: obstacleData._obstacleId
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9075760370061045119, guid: 2f4a3c76decc6d0469042834c56a3c4b, type: 3}
       propertyPath: m_Size.x
       value: 1.2

@@ -77,6 +77,7 @@ Transform:
   m_Children:
   - {fileID: 5002205451539954380}
   - {fileID: 4257331738477110869}
+  - {fileID: 6446032354799427303}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7370402732475739585
@@ -95,6 +96,7 @@ MonoBehaviour:
   _monoInstallers:
   - {fileID: 5412522787491024511}
   - {fileID: 8485360887587201393}
+  - {fileID: 5776022878745090773}
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 1
   _editorReflectionBakingCoverageMode: 0
@@ -153,3 +155,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551cc22c2b8d4c343a35021736f3465b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8611222380662551037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6446032354799427303}
+  - component: {fileID: 5776022878745090773}
+  m_Layer: 0
+  m_Name: StorageInstaller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6446032354799427303
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8611222380662551037}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2798036907571307412}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5776022878745090773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8611222380662551037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d039e571a689aa40b1ef159e8a7bf3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetImplementation: {fileID: 5390663644474626981, guid: 6a42041d6e027704fb0760121cd0e833, type: 3}
