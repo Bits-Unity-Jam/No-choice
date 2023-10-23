@@ -3,7 +3,7 @@ using UnityEngine;
 
 public enum ObstacleId
 {
-    Callibre, Drone, Helicopter, Rocket, Soldier
+    Callibre, Drone, Helicopter, Rocket, Soldier, Energy
 }
 
 /// <summary>

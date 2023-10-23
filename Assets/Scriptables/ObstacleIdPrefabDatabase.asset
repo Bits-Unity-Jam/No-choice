@@ -23,3 +23,5 @@ MonoBehaviour:
     prefabPath: Assets/Prefabs/Obstacles/New/Calibr.prefab
   - obstacleId: 2
     prefabPath: Assets/Prefabs/Obstacles/New/Helicopter.prefab
+  - obstacleId: 5
+    prefabPath: Assets/Prefabs/Obstacles/Boosters/Energy.prefab

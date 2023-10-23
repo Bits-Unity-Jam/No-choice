@@ -46,7 +46,7 @@ public class GameStageController : MonoBehaviour
     {
         if (_isGameStarted) { return; }
 
-        _locomotionService.GeneralMotionSpeed = 5;
+        _locomotionService.GeneralMotionSpeed = 7;
         _elementSequenceActivatingTween.DoDeactivate();
         tweensToHideInMenu.ForEach(obj => obj.DoDeactivate());
         objectsToHideInMenu.ForEach(obj => obj.SetActive(true));
