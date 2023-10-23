@@ -12,7 +12,13 @@ namespace Effects.Parallax
         [SerializeField] private float generalMotionSpeed = 1;
         
         public event Action<RepeatableElement> OnElementPositionReset;
-        
+        public float GeneralMotionSpeed { get => generalMotionSpeed; set => generalMotionSpeed = value; }
+
+        private void Start()
+        {
+            //elements.ForEach(ResetInitialPosition);
+        }
+
         private void LateUpdate() => elements.ForEach(HandleParallaxElementBehavior);
 
         private void HandleParallaxElementBehavior(RepeatableElement layoutElement)

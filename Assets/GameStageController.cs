@@ -2,6 +2,7 @@ using Game.Energy;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Effects.Parallax;
 using Game.UI.Popups;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ public class GameStageController : MonoBehaviour
     [SerializeField]
     private EnergyController energyController;
 
+    [SerializeField] private ScreenElementLocomotionService _locomotionService;
 
     [SerializeField]
     private List<BaseActivatingTween>tweensToHideInMenu;
@@ -36,7 +38,7 @@ public class GameStageController : MonoBehaviour
 
     private void Start()
     {
-        
+        _locomotionService.GeneralMotionSpeed = 0;
         _elementSequenceActivatingTween.DoActivate();
     }
 
@@ -44,6 +46,7 @@ public class GameStageController : MonoBehaviour
     {
         if (_isGameStarted) { return; }
 
+        _locomotionService.GeneralMotionSpeed = 5;
         _elementSequenceActivatingTween.DoDeactivate();
         tweensToHideInMenu.ForEach(obj => obj.DoDeactivate());
         objectsToHideInMenu.ForEach(obj => obj.SetActive(true));

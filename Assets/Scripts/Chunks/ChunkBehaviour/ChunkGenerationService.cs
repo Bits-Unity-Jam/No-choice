@@ -28,7 +28,7 @@ namespace Chunks.ChunkBehaviour
             _screenElementLocomotionService ??= GetComponent<ScreenElementLocomotionService>();
         }
 
-        private void Start()
+        private void Awake()
         {
             _screenElementLocomotionService.OnElementPositionReset += HandleElementPositionReset;
         }
