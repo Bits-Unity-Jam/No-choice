@@ -73,6 +73,7 @@ namespace Chunks.ChunkRedactor
 
             foreach (var obstacle in _foundObstacle)
             {
+                obstacle.IsChunkRedactorModeActive = true;
                 _foundObstacleDatas.Add(obstacle.ObstacleData);
             }
 

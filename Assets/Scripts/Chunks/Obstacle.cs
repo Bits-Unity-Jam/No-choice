@@ -12,24 +12,32 @@ namespace Chunks
         [FormerlySerializedAs("_chunkElementData")] [SerializeField]
         private ObstacleData obstacleData;
 
+        [SerializeField] private bool _isChunkredactorModeActive;
+        
         private IActivateable _activateable;
         private IDeactivateable _deactivateable;
         private IDefaultStateReturner _defaultStateReturner;
 
+        /// <summary>
+        /// Sets if chunk redactor mode active. When this mode is active, chunk data will update every ObstacleData property call.
+        /// </summary>
+        public bool IsChunkRedactorModeActive
+        {
+            get => _isChunkredactorModeActive;
+            set => _isChunkredactorModeActive = value;
+        }
+        
         public ObstacleData ObstacleData
         {
             get
             {
-                
-                UpdateElementData();
+                if (IsChunkRedactorModeActive)
+                {
+                    UpdateElementData();
+                }
 
                 return obstacleData;
             }
-            set => obstacleData = value;
-        }
-        public ObstacleData ObstacleDataWithoutUpdate
-        {
-            get => obstacleData;
             set => obstacleData = value;
         }
 

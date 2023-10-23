@@ -42,7 +42,9 @@ namespace Chunks.ChunkBehaviour
             foreach (var obstacle in loadedNextChunk)
             {
                 obstacle.transform.parent = obj.ElementTransform;
-                obstacle.transform.localPosition = obstacle.ObstacleDataWithoutUpdate.LocalPosition.ConvertToVector3();
+                obstacle.IsChunkRedactorModeActive = false;
+                obstacle.transform.localPosition = obstacle.ObstacleData.LocalPosition.ConvertToVector3();
+                obstacle.Activate();
             }
         }
 
