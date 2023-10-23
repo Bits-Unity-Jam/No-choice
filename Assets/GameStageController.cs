@@ -16,8 +16,6 @@ public class GameStageController : MonoBehaviour
     [SerializeField]
     private EnergyController energyController;
 
-    [SerializeField]
-    private ConstantMove constantMove;
 
     [SerializeField]
     private List<BaseActivatingTween>tweensToHideInMenu;
@@ -33,7 +31,6 @@ public class GameStageController : MonoBehaviour
         _elementSequenceActivatingTween.DoDeactivateImmediately();
         _pointerCatcher.OnPointerDownCaught += HandlePointerDownCaught;
         tweensToHideInMenu.ForEach(obj => obj.DoActivate());
-        constantMove.Speed = 0;
         objectsToHideInMenu.ForEach(obj => obj.SetActive(false));
     }
 
@@ -51,7 +48,6 @@ public class GameStageController : MonoBehaviour
         tweensToHideInMenu.ForEach(obj => obj.DoDeactivate());
         objectsToHideInMenu.ForEach(obj => obj.SetActive(true));
         objectsToHideInGame.ForEach(obj => obj.SetActive(false));
-        constantMove.Speed = constantMove.DefaultSpeed;
         _isGameStarted = true;
         energyController.StartTimer();
     }
