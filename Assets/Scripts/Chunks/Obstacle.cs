@@ -16,17 +16,11 @@ namespace Chunks
         private IDeactivateable _deactivateable;
         private IDefaultStateReturner _defaultStateReturner;
 
-        public ObstacleData ActiveObstacleData
+        public ObstacleData ObstacleData
         {
             get
             {
-                if (obstacleData.LocalPosition != default
-                    || obstacleData.LocalRotation != default
-                    || obstacleData.Scale != default)
-                {
-                    return obstacleData;
-                }
-
+                
                 UpdateElementData();
 
                 return obstacleData;
@@ -44,11 +38,11 @@ namespace Chunks
 
         public void ApplyData(ObstacleData obstacleData, bool hasToActivate = false)
         {
-            ActiveObstacleData = obstacleData;
+            ObstacleData = obstacleData;
 
-            transform.localScale = obstacleData.Scale;
-            transform.localRotation = obstacleData.LocalRotation;
-            transform.localPosition = obstacleData.LocalPosition;
+            transform.localScale = obstacleData.Scale.ConvertToVector3();
+            transform.localRotation = obstacleData.LocalRotation.ConvertToQuaternion();
+            transform.localPosition = obstacleData.LocalPosition.ConvertToVector3();
 
 
             gameObject.SetActive(hasToActivate);
@@ -64,9 +58,9 @@ namespace Chunks
             obstacleData = new ObstacleData()
             {
                 ObstacleId = obstacleData.ObstacleId,
-                LocalPosition = transform.localPosition,
-                LocalRotation = transform.localRotation,
-                Scale = transform.localScale
+                LocalPosition = new(transform.localPosition),
+                LocalRotation = new (transform.localRotation),
+                Scale = new(transform.localScale)
             };
         }
 

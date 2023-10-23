@@ -8,6 +8,6 @@ namespace DataStorage
         public void SaveAs(string data, string pathAndName) =>
             File.WriteAllText(Application.dataPath + pathAndName + ".json", data);
 
-        public string Load(string path) => File.ReadAllText(Application.dataPath + path);
+        public string Load(string path) => File.ReadAllText(Application.dataPath + path + ".json");
     }
 }

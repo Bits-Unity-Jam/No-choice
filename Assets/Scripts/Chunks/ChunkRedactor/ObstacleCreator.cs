@@ -34,7 +34,7 @@ namespace Chunks.ChunkRedactor
             created.ReturnToDefaultState();
             created.transform.parent = _createdObjectsParentTransform;
             created.transform.localPosition = Vector3.zero;
-            created.name = Enum.GetNames(typeof(ObstacleId))[(int)obstacleId];
+            //created.name = Enum.GetNames(typeof(ObstacleId))[(int)obstacleId];
             _createdObstacles.Add(created);
             return created;
         }
@@ -44,7 +44,7 @@ namespace Chunks.ChunkRedactor
             Obstacle created = Create(obstacleData.ObstacleId);
 
             created.ApplyData(obstacleData);
-            
+            created.ReturnToDefaultState();
             return created;
         }
         

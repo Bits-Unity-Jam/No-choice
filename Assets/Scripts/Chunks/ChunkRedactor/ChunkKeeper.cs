@@ -57,6 +57,7 @@ namespace Chunks.ChunkRedactor
 
         public void Save()
         {
+            
             _foundObstacle = new List<Obstacle>();
             _foundObstacleDatas = new List<ObstacleData>();
             
@@ -67,12 +68,12 @@ namespace Chunks.ChunkRedactor
 
             foreach (var obstacle in _foundObstacle)
             {
-                _foundObstacleDatas.Add(obstacle.ActiveObstacleData);
+                _foundObstacleDatas.Add(obstacle.ObstacleData);
             }
 
             ChunkData chunkData = new ChunkData()
                 { ChunkIndex = _chunkIndex, ChunkObstaclesData = _foundObstacleDatas };
-
+            
             string serialized = _serializer.Serialize(chunkData);
            
             _storage.SaveAs(serialized, $"/Resources/Chunks/Level_{_chunkIndex}"); 
@@ -82,7 +83,7 @@ namespace Chunks.ChunkRedactor
         {
             _obstacleCreator.Clear();
             
-            string loadedChunkDataString  = _storage.Load($"Levels/Level_{_chunkIndex}");
+            string loadedChunkDataString  = _storage.Load($"/Resources/Chunks/Level_{_chunkIndex}");
 
             ChunkData loadedChunkData = _serializer.Deserialize<ChunkData>(loadedChunkDataString);
             
