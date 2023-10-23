@@ -38,6 +38,7 @@ namespace Effects.Parallax
                 new Vector3(newLocalPosition.x, layoutElement.ElementInitialPosition.y, newLocalPosition.z);
 
             layoutElement.ElementTransform.localPosition = newLocalPosition;
+            
             OnElementPositionReset?.Invoke(layoutElement);
         }
     }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using DataStorage;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -36,7 +37,8 @@ namespace Chunks.ChunkRedactor
     {
         [SerializeField] private Transform _createdObjectsParentTransform;
         [SerializeField] private ObstacleCreator _obstacleCreator;
-        
+
+        private const string CHUNK_SAVE_PATH = "/Resources/Chunks/";
         private List<Obstacle> _foundObstacle;
         private List<ObstacleData> _foundObstacleDatas;
         private ISerializer _serializer;
@@ -44,6 +46,8 @@ namespace Chunks.ChunkRedactor
 
         [Space, SerializeField, Header("Index to save/load the chunk:")] private int _chunkIndex;
 
+        public int ChunksNumber => Directory.GetFiles(CHUNK_SAVE_PATH).Length;
+        
         [Inject]
         private void Construct(ISerializer serializer,  IStorage storage)
         {
@@ -77,7 +81,7 @@ namespace Chunks.ChunkRedactor
             
             string serialized = _serializer.Serialize(chunkData);
            
-            _storage.SaveAs(serialized, $"/Resources/Chunks/Level_{_chunkIndex}"); 
+            _storage.SaveAs(serialized, $"{CHUNK_SAVE_PATH}/Chunk_{_chunkIndex}"); 
         }
 
         public List<Obstacle> Load() => Load(_chunkIndex);
@@ -86,7 +90,7 @@ namespace Chunks.ChunkRedactor
         {
             _obstacleCreator.Clear();
             
-            string loadedChunkDataString  = _storage.Load($"/Resources/Chunks/Level_{chunkIndex}");
+            string loadedChunkDataString  = _storage.Load($"{CHUNK_SAVE_PATH}/Chunk_{chunkIndex}");
 
             ChunkData loadedChunkData = _serializer.Deserialize<ChunkData>(loadedChunkDataString);
 
