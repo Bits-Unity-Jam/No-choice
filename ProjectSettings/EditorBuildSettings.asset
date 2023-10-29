@@ -6,6 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Release.unity
-    guid: ceb5d3e4e6983664ab3b3bc89c7f6fcd
-  m_configObjects: {}
+    path: Assets/Scenes/Dev/ChunkRedactor.unity
+    guid: f5477ff874df6d7408c0039b9d217676
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 69bf68af05b6d854ba57a3391158e85b, type: 2}
