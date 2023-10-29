@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Chunks;
 using UnityEngine;
 
 namespace Assets.Script.Chunks
@@ -9,11 +10,11 @@ namespace Assets.Script.Chunks
     public class ChunkBehaviour : MonoBehaviour
     {
         [SerializeField]
-        private List<ChunkElement> chunkMembers;
+        private List<Obstacle> chunkMembers;
 
         private void OnValidate()
         {
-            chunkMembers ??= GetComponentsInChildren<ChunkElement>().ToList();
+            chunkMembers ??= GetComponentsInChildren<Obstacle>().ToList();
         }
 
         public void ResetInitialState()

@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.Serialization;
 using Zenject;
 
 namespace Assets.Scripts.Pools.BasePools.Sources
@@ -11,12 +12,13 @@ namespace Assets.Scripts.Pools.BasePools.Sources
     public class ObstacleObjectSource : SingleObjectSource<PoolObject>
     {
         [SerializeField]
-        private ObstacleId ObstacleId;
+        private ObstacleId obstacleId;
 
         private PoolObject _foundPoolObject;
 
         private ObstacleIdPrefabDatabase _obstacleIdPrefabDatabase;
-
+        public ObstacleId ObstacleId { get => obstacleId; set => obstacleId = value; }
+        
         [Inject]
         private void Construct(ObstacleIdPrefabDatabase obstacleIdPrefabDatabase) 
         {
@@ -28,7 +30,7 @@ namespace Assets.Scripts.Pools.BasePools.Sources
             if (_foundPoolObject == default)
             {
                 ObstaclePrefabIdCompliance obstacleIdPrefabCompliance = 
-                    _obstacleIdPrefabDatabase.GetObstacleWithId(ObstacleId);
+                    _obstacleIdPrefabDatabase.GetObstacleWithId(obstacleId);
 
                 AsyncOperationHandle<Object> loadedObject = 
                     Addressables.LoadAssetAsync<Object>(obstacleIdPrefabCompliance.PrefabPath);

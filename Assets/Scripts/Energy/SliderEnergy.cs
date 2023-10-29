@@ -6,6 +6,7 @@ namespace Game.Energy.UI
 {
     public class SliderEnergy : MonoBehaviour
     {
+        
         private Slider _sliderEnergy;
 
         private void Awake()
@@ -30,4 +31,3 @@ namespace Game.Energy.UI
         }
     }
 }
-

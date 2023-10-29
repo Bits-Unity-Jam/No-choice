@@ -15,3 +15,11 @@ MonoBehaviour:
   _obstaclePrefabIdCompliances:
   - obstacleId: 4
     prefabPath: Assets/Prefabs/Obstacles/New/Soldier.prefab
+  - obstacleId: 1
+    prefabPath: Assets/Prefabs/Obstacles/New/Drone.prefab
+  - obstacleId: 3
+    prefabPath: Assets/Prefabs/Obstacles/New/Rocket.prefab
+  - obstacleId: 0
+    prefabPath: Assets/Prefabs/Obstacles/New/Calibr.prefab
+  - obstacleId: 2
+    prefabPath: Assets/Prefabs/Obstacles/New/Helicopter.prefab
