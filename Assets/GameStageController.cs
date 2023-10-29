@@ -46,6 +46,8 @@ public class GameStageController : MonoBehaviour
     {
         if (_isGameStarted) { return; }
 
+        HapticController.Instance.PlayHaptic(HapticType.Start);
+        
         _locomotionService.GeneralMotionSpeed = 7;
         _elementSequenceActivatingTween.DoDeactivate();
         tweensToHideInMenu.ForEach(obj => obj.DoDeactivate());

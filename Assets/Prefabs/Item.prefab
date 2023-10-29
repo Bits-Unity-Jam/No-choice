@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3552773178313461581}
+  - component: {fileID: 109151278278086396}
   - component: {fileID: 3775461788415393553}
   m_Layer: 0
-  m_Name: Hit
+  m_Name: SoundAndHaptic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,6 +33,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8093605575849588045}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &109151278278086396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3402746309393949887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7600a66dbf902a548a17a6e1f298827e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 3775461788415393553}
+  isActiveMusic: 0
+  isActiveHaptic: 0
+  hapticType: 0
+  delayBetweenActions: 0.5
+  useTagFilter: 0
+  objectTag: 
 --- !u!82 &3775461788415393553
 AudioSource:
   m_ObjectHideFlags: 0
@@ -42,7 +62,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 96d729ff711455b4d8dc825b357bb2e3, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 469c877a8895b374bb001301f8111c20, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -371,3 +391,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   error: 0.21
+  lerpDist: 1

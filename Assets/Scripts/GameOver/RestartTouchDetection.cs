@@ -58,6 +58,7 @@ namespace Game.Controller.Restart.TouchDetection
             if (!restartStarted)
             {
                 restartStarted = true;
+                HapticController.Instance.PlayHaptic(HapticType.End);
                 
                 textRestart.gameObject.SetActive(true);
                 textRestart.DOFade(1f, 0.5f);

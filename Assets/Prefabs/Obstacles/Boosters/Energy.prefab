@@ -338,6 +338,26 @@ PrefabInstance:
       propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6578913446117985700, guid: 9472ab3a7cc7bbc43aa9e7ace862b26d, type: 3}
+      propertyPath: objectTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6578913446117985700, guid: 9472ab3a7cc7bbc43aa9e7ace862b26d, type: 3}
+      propertyPath: hapticType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6578913446117985700, guid: 9472ab3a7cc7bbc43aa9e7ace862b26d, type: 3}
+      propertyPath: useTagFilter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6578913446117985700, guid: 9472ab3a7cc7bbc43aa9e7ace862b26d, type: 3}
+      propertyPath: isActiveMusic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6578913446117985700, guid: 9472ab3a7cc7bbc43aa9e7ace862b26d, type: 3}
+      propertyPath: isActiveHaptic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 682461919411486722, guid: 9472ab3a7cc7bbc43aa9e7ace862b26d, type: 3}
     - {fileID: 2037935497912916991, guid: 9472ab3a7cc7bbc43aa9e7ace862b26d, type: 3}
