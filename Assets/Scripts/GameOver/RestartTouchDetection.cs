@@ -58,7 +58,8 @@ namespace Game.Controller.Restart.TouchDetection
             if (!restartStarted)
             {
                 restartStarted = true;
-
+                
+                textRestart.gameObject.SetActive(true);
                 textRestart.DOFade(1f, 0.5f);
                 StartCoroutine(ChangeTimeScaleSmoothly(0f, 1f));
             }
@@ -66,7 +67,12 @@ namespace Game.Controller.Restart.TouchDetection
 
         private IEnumerator RestartEnd()
         {
-            textRestart.DOFade(0f, 0.75f).SetUpdate(true);
+            
+            textRestart.DOFade(0f, 0.75f).SetUpdate(true).OnComplete((() =>
+            {
+                textRestart.gameObject.SetActive(false);
+            }));
+            
             yield return new WaitForSecondsRealtime(1f);
             Time.timeScale = 1f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
