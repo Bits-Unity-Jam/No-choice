@@ -2,6 +2,7 @@ using Game.Energy;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Effects.Parallax;
 using Game.UI.Popups;
 using UnityEngine;
 
@@ -16,8 +17,7 @@ public class GameStageController : MonoBehaviour
     [SerializeField]
     private EnergyController energyController;
 
-    [SerializeField]
-    private ConstantMove constantMove;
+    [SerializeField] private ScreenElementLocomotionService _locomotionService;
 
     [SerializeField]
     private List<BaseActivatingTween>tweensToHideInMenu;
@@ -33,13 +33,12 @@ public class GameStageController : MonoBehaviour
         _elementSequenceActivatingTween.DoDeactivateImmediately();
         _pointerCatcher.OnPointerDownCaught += HandlePointerDownCaught;
         tweensToHideInMenu.ForEach(obj => obj.DoActivate());
-        constantMove.Speed = 0;
         objectsToHideInMenu.ForEach(obj => obj.SetActive(false));
     }
 
     private void Start()
     {
-        
+        _locomotionService.GeneralMotionSpeed = 0;
         _elementSequenceActivatingTween.DoActivate();
     }
 
@@ -47,11 +46,13 @@ public class GameStageController : MonoBehaviour
     {
         if (_isGameStarted) { return; }
 
+        HapticController.Instance.PlayHaptic(HapticType.Start);
+        
+        _locomotionService.GeneralMotionSpeed = 7;
         _elementSequenceActivatingTween.DoDeactivate();
         tweensToHideInMenu.ForEach(obj => obj.DoDeactivate());
         objectsToHideInMenu.ForEach(obj => obj.SetActive(true));
         objectsToHideInGame.ForEach(obj => obj.SetActive(false));
-        constantMove.Speed = constantMove.DefaultSpeed;
         _isGameStarted = true;
         energyController.StartTimer();
     }
