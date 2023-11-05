@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3883733919215259732}
+  - component: {fileID: 2486835646931178320}
   - component: {fileID: 3194257088710429350}
   m_Layer: 0
-  m_Name: Hit
+  m_Name: SoundAndHaptic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,6 +33,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1029993292801279292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2486835646931178320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2251922685357618823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7600a66dbf902a548a17a6e1f298827e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 3194257088710429350}
+  isActiveMusic: 1
+  isActiveHaptic: 1
+  hapticType: 3
+  delayBetweenActions: 0.5
+  useTagFilter: 0
+  objectTag: 
 --- !u!82 &3194257088710429350
 AudioSource:
   m_ObjectHideFlags: 0
@@ -140,7 +160,6 @@ GameObject:
   - component: {fileID: 806828875884087209}
   - component: {fileID: 2061679117605389802}
   - component: {fileID: 7920498124365821199}
-  - component: {fileID: 531166282222711631}
   m_Layer: 6
   m_Name: Shield
   m_TagString: Shield
@@ -243,19 +262,6 @@ MonoBehaviour:
   speed: 50
   error: 0.2
   lerpDist: 3.5
---- !u!114 &531166282222711631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5318742048672879404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7600a66dbf902a548a17a6e1f298827e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 3194257088710429350}
 --- !u!1 &5960230302998487822
 GameObject:
   m_ObjectHideFlags: 0
