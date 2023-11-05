@@ -13,15 +13,21 @@ MonoBehaviour:
   m_Name: ObstacleIdPrefabDatabase
   m_EditorClassIdentifier: 
   _obstaclePrefabIdCompliances:
-  - obstacleId: 4
-    prefabPath: Assets/Prefabs/Obstacles/New/Soldier.prefab
-  - obstacleId: 1
-    prefabPath: Assets/Prefabs/Obstacles/New/Drone.prefab
-  - obstacleId: 3
-    prefabPath: Assets/Prefabs/Obstacles/New/Rocket.prefab
   - obstacleId: 0
-    prefabPath: Assets/Prefabs/Obstacles/New/Calibr.prefab
+    prefabPath: Assets/Prefabs/Obstacles/Enemy/Calibr.prefab
+  - obstacleId: 1
+    prefabPath: Assets/Prefabs/Obstacles/Enemy/Drone.prefab
   - obstacleId: 2
-    prefabPath: Assets/Prefabs/Obstacles/New/Helicopter.prefab
+    prefabPath: Assets/Prefabs/Obstacles/Enemy/Helicopter.prefab
+  - obstacleId: 3
+    prefabPath: Assets/Prefabs/Obstacles/Enemy/Rocket.prefab
+  - obstacleId: 4
+    prefabPath: Assets/Prefabs/Obstacles/Enemy/Soldier.prefab
   - obstacleId: 5
+    prefabPath: Assets/Prefabs/Obstacles/Enemy/Soldier (Jetpack).prefab
+  - obstacleId: 6
+    prefabPath: Assets/Prefabs/Obstacles/Enemy/Lukashenko.prefab
+  - obstacleId: 7
+    prefabPath: Assets/Prefabs/Obstacles/Enemy/Pukin.prefab
+  - obstacleId: 8
     prefabPath: Assets/Prefabs/Obstacles/Boosters/Energy.prefab

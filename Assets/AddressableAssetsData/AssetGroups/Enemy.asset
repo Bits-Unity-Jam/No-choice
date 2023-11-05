@@ -10,40 +10,55 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Default Local Group
+  m_Name: Enemy
   m_EditorClassIdentifier: 
-  m_GroupName: Default Local Group
+  m_GroupName: Enemy
   m_Data:
     m_SerializedData: []
   m_GUID: 580cc998998a11d4ca077d8d1ec94eb0
   m_SerializeEntries:
   - m_GUID: 35505456668b08242b08b4a796f2141b
-    m_Address: Assets/Prefabs/Obstacles/New/Soldier.prefab
+    m_Address: Assets/Prefabs/Obstacles/Enemy/Soldier.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 64985f082955a89478659ae557798722
-    m_Address: Assets/Prefabs/Obstacles/New/Drone.prefab
+    m_Address: Assets/Prefabs/Obstacles/Enemy/Drone.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 28fe0b5c59983524ab26f6c82e257db0
-    m_Address: Assets/Prefabs/Obstacles/New/Rocket.prefab
+    m_Address: Assets/Prefabs/Obstacles/Enemy/Rocket.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 75a9d3b6772c425438abc7914c6ab44e
-    m_Address: Assets/Prefabs/Obstacles/New/Calibr.prefab
+    m_Address: Assets/Prefabs/Obstacles/Enemy/Calibr.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d8e014841026ca44384e595ecf896f28
-    m_Address: Assets/Prefabs/Obstacles/New/Helicopter.prefab
+    m_Address: Assets/Prefabs/Obstacles/Enemy/Helicopter.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 05b5646162824b847a4f0358ca12bbd9
     m_Address: Assets/Prefabs/Obstacles/Boosters/Energy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5450eadfd78d84343ba72c894e58b6a2
+    m_Address: Assets/Prefabs/Obstacles/Enemy/Soldier (Jetpack).prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6221b6848d4e4d4e856c83f3866d63e
+    m_Address: Assets/Prefabs/Obstacles/Enemy/Pukin.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c73e60842c33ad34495f265f7ef9b754
+    m_Address: Assets/Prefabs/Obstacles/Enemy/Lukashenko.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
