@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Feel/FeelDemos/Blob/FeelBlob.unity.meta
+guid: 5c2950ce60a0fb64ead6ef839a3becd2
+========
 guid: 772de66cd8677364c9e6690f50e186fb
+>>>>>>>> origin/feature/ED-66-haptic:Assets/AddressableAssetsData/Android/addressables_content_state.bin.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
