@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Feel/FeelDemos/Brass/FeelBrass.unity.meta
+guid: 753e829d4a525284c97cae6616909195
+========
 guid: 5c2950ce60a0fb64ead6ef839a3becd2
+>>>>>>>> origin/feature/ED-66-haptic:Assets/Feel/FeelDemos/Blob/FeelBlob.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
