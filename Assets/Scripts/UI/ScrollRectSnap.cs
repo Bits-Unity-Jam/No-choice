@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,44 +6,26 @@ namespace UI.Elements
 {
     public class ScrollRectSnap : MonoBehaviour
     {
-        private float[] _points;
-        [Tooltip("How many items are there within the content (steps)")]
-        [SerializeField]
-        private int itemsInContent = 1;
-        [Tooltip("How quickly the GUI snaps to each panel")]
-        [SerializeField]
-        private float snapSpeed;
-        [SerializeField]
-        private float inertiaCutoffMagnitude;
-        private float stepSize;
+        [SerializeField] private int itemsInContent = 1;
+        [SerializeField] private float snapSpeed;
+        [SerializeField] private float inertiaCutoffMagnitude;
 
+        private float[] _points;
+        private float stepSize;
         private ScrollRect scroll;
-        private RectTransform scrollRectTransform;
         private bool LerpH;
         private float targetH;
-        [Tooltip("Snap horizontally")]
-        [SerializeField]
-        private bool snapInH = true;
-
+        [SerializeField] private bool snapInH = true;
         private bool LerpV;
         private float targetV;
-        [Tooltip("Snap vertically")]
-        [SerializeField]
-        private bool snapInV = true;
-
+        [SerializeField] private bool snapInV = true;
         private bool dragInit = true;
         private int dragStartNearest;
         private int _currentPoint;
         private bool _isDragging = false;
-
-        [Header("Button")]
-        [SerializeField]
-        private Button nextButton;
-        [SerializeField]
-        private Button previousButton;
-
-        [SerializeField]
-        private AudioSource sweepSound;
+        [Header("Button")] [SerializeField] private Button nextButton;
+        [SerializeField] private Button previousButton;
+        [SerializeField] private AudioSource sweepSound;
 
         public event Action<int> OnScrollItemChanged;
 
@@ -66,13 +46,21 @@ namespace UI.Elements
             previousButton.onClick.AddListener(SetPrevious);
         }
 
-        // Use this for initialization
         private void Start()
         {
-            scroll = gameObject.GetComponent<ScrollRect>();
-            scrollRectTransform = gameObject.GetComponent<RectTransform>();
-            scroll.inertia = true;
+            InitializeScroll();
+            SetInteractable();
+            targetH = 0;
+            targetV = 0;
+            scroll.horizontalNormalizedPosition = 0;
+            scroll.verticalNormalizedPosition = 0;
+        }
 
+        private void InitializeScroll()
+        {
+            scroll = gameObject.GetComponent<ScrollRect>();
+            gameObject.GetComponent<RectTransform>();
+            scroll.inertia = true;
             if (itemsInContent > 0)
             {
                 _points = new float[itemsInContent];
@@ -85,45 +73,39 @@ namespace UI.Elements
             }
             else
             {
+                _points = new float[1];
                 _points[0] = 0;
             }
-
-            SetInteractable();
         }
 
         public void SetNext()
         {
+            HandleSetAction(1);
+        }
+
+        public void SetPrevious()
+        {
+            HandleSetAction(-1);
+        }
+
+        private void HandleSetAction(int direction)
+        {
             sweepSound.Play();
             CurrentPoint = FindNearest(scroll.horizontalNormalizedPosition, _points);
-            int targetPoint = Mathf.Clamp(CurrentPoint + 1, 0, _points.Length - 1);
+            int targetPoint = Mathf.Clamp(CurrentPoint + direction, 0, _points.Length - 1);
+
             if (scroll.horizontal && snapInH && scroll.horizontalNormalizedPosition is > -0.001f and <= 1.001f)
             {
                 targetH = _points[targetPoint];
                 LerpH = true;
             }
-            if (scroll.vertical && snapInV && scroll.verticalNormalizedPosition is >= -0.001f and <= 1.001f)
-            {
-                targetH = _points[targetPoint];
-                LerpH = true;
-            }
-            CurrentPoint = targetPoint;
-        }
 
-        public void SetPrevious()
-        {
-            sweepSound.Play();
-            CurrentPoint = FindNearest(scroll.horizontalNormalizedPosition, _points);
-            int targetPoint = Mathf.Clamp(CurrentPoint - 1, 0, _points.Length - 1);
-            if (scroll.horizontal && snapInH && scroll.horizontalNormalizedPosition is >= -0.001f and <= 1.001f)
-            {
-                targetH = _points[targetPoint];
-                LerpH = true;
-            }
             if (scroll.vertical && snapInV && scroll.verticalNormalizedPosition is >= -0.001f and <= 1.001f)
             {
-                targetH = _points[targetPoint];
+                targetV = _points[targetPoint];
                 LerpH = true;
             }
+
             CurrentPoint = targetPoint;
         }
 
@@ -153,45 +135,45 @@ namespace UI.Elements
             SetInteractable();
             if (LerpH)
             {
-                scroll.horizontalNormalizedPosition = Mathf.Lerp(scroll.horizontalNormalizedPosition, targetH, snapSpeed * Time.deltaTime);
+                scroll.horizontalNormalizedPosition = Mathf.Lerp(scroll.horizontalNormalizedPosition, targetH,
+                    snapSpeed * Time.deltaTime);
                 if (Mathf.Approximately(scroll.horizontalNormalizedPosition, targetH)) LerpH = false;
             }
+
             if (LerpV)
             {
-                scroll.verticalNormalizedPosition = Mathf.Lerp(scroll.verticalNormalizedPosition, targetV, snapSpeed * Time.deltaTime);
+                scroll.verticalNormalizedPosition = Mathf.Lerp(scroll.verticalNormalizedPosition, targetV,
+                    snapSpeed * Time.deltaTime);
                 if (Mathf.Approximately(scroll.verticalNormalizedPosition, targetV)) LerpV = false;
             }
-            
         }
 
         public void DragEnd()
         {
-           
             int target = FindNearest(scroll.horizontalNormalizedPosition, _points);
 
-            if (target == dragStartNearest && scroll.velocity.sqrMagnitude > inertiaCutoffMagnitude * inertiaCutoffMagnitude)
+            if (target == dragStartNearest &&
+                scroll.velocity.sqrMagnitude > inertiaCutoffMagnitude * inertiaCutoffMagnitude)
             {
-                if (scroll.velocity.x < 0)
-                {
-                    target = dragStartNearest + 1;
-                }
-                else if (scroll.velocity.x > 1)
-                {
-                    target = dragStartNearest - 1;
-                }
-                target = Mathf.Clamp(target, 0, _points.Length - 1);
-                
+                target = Mathf.Clamp((scroll.velocity.x < 0) ? dragStartNearest + 1 : dragStartNearest - 1, 0, _points.Length - 1);
             }
 
-            if (scroll.horizontal && snapInH && scroll.horizontalNormalizedPosition > 0f && scroll.horizontalNormalizedPosition < 1f)
+            if (scroll.horizontal)
             {
-                targetH = _points[target];
-                LerpH = true;
+                if (snapInH && scroll.horizontalNormalizedPosition is > 0f and < 1f)
+                {
+                    targetH = _points[target];
+                    LerpH = true;
+                }
             }
-            if (scroll.vertical && snapInV && scroll.verticalNormalizedPosition > 0f && scroll.verticalNormalizedPosition < 1f)
+
+            if (scroll.vertical)
             {
-                targetH = _points[target];
-                LerpH = true;
+                if (snapInV && scroll.verticalNormalizedPosition is > 0f and < 1f)
+                {
+                    targetV = _points[target];
+                    LerpH = true;
+                }
             }
 
             dragInit = true;
@@ -210,11 +192,6 @@ namespace UI.Elements
             LerpV = false;
         }
 
-        public void SnapToItem(RectTransform target)
-        {
-            //integrate scroll to item logic later if needed
-        }
-
         private int FindNearest(float f, float[] array)
         {
             float distance = Mathf.Infinity;
@@ -227,6 +204,7 @@ namespace UI.Elements
                     output = index;
                 }
             }
+
             return output;
         }
     }
