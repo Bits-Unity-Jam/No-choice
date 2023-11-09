@@ -19,6 +19,6 @@ public class MenuContentSizeSetter : MonoBehaviour
     [Button]
     private void UpdateMenuSize()
     {
-        rectTransform.sizeDelta = new Vector2(refRectTransform.rect.width * 2 + space, refRectTransform.sizeDelta.y);
+        rectTransform.sizeDelta = new Vector2(refRectTransform.rect.width * 3 + space, refRectTransform.sizeDelta.y);
     }
 }

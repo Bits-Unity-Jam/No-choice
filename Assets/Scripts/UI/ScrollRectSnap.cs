@@ -93,7 +93,12 @@ namespace UI.Elements
         {
             sweepSound.Play();
             CurrentPoint = FindNearest(scroll.horizontalNormalizedPosition, _points);
-            int targetPoint = Mathf.Clamp(CurrentPoint + direction, 0, _points.Length - 1);
+            SetPoint(CurrentPoint + direction);
+        }
+
+        public void SetPoint(int point)
+        {
+            int targetPoint = Mathf.Clamp(point, 0, _points.Length - 1);
 
             if (scroll.horizontal && snapInH && scroll.horizontalNormalizedPosition is > -0.001f and <= 1.001f)
             {
