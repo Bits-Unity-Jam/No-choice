@@ -12,6 +12,7 @@ namespace UI.Elements
 
         private float[] _points;
         private float stepSize;
+        [SerializeField]
         private ScrollRect scroll;
         private bool LerpH;
         private float targetH;
@@ -42,8 +43,8 @@ namespace UI.Elements
         private void Awake()
         {
             Time.timeScale = 1;
-            nextButton.onClick.AddListener(SetNext);
-            previousButton.onClick.AddListener(SetPrevious);
+            nextButton?.onClick.AddListener(SetNext);
+            previousButton?.onClick.AddListener(SetPrevious);
         }
 
         private void Start()
@@ -58,7 +59,7 @@ namespace UI.Elements
 
         private void InitializeScroll()
         {
-            scroll = gameObject.GetComponent<ScrollRect>();
+            scroll ??= gameObject.GetComponent<ScrollRect>();
             gameObject.GetComponent<RectTransform>();
             scroll.inertia = true;
             if (itemsInContent > 0)
