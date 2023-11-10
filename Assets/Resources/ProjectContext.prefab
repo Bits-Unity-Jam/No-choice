@@ -76,8 +76,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5002205451539954380}
+  - {fileID: 9156153538405197086}
   - {fileID: 4257331738477110869}
   - {fileID: 6446032354799427303}
+  - {fileID: 2628157951034597175}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7370402732475739585
@@ -97,6 +99,8 @@ MonoBehaviour:
   - {fileID: 5412522787491024511}
   - {fileID: 8485360887587201393}
   - {fileID: 5776022878745090773}
+  - {fileID: 2017514562715281389}
+  - {fileID: 872400405969651530}
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 1
   _editorReflectionBakingCoverageMode: 0
@@ -155,6 +159,96 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551cc22c2b8d4c343a35021736f3465b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4855518315876496326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2628157951034597175}
+  - component: {fileID: 872400405969651530}
+  m_Layer: 0
+  m_Name: CurrencyServicenstaller (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2628157951034597175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4855518315876496326}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2798036907571307412}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &872400405969651530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4855518315876496326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de2ce002b7a64dc9b660c0e30f8acb10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetImplementation: {fileID: 5390663644474626981, guid: 3f4f92fe8f327bd40a3e546bb20f85a1, type: 3}
+--- !u!1 &5565744338616269727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9156153538405197086}
+  - component: {fileID: 2017514562715281389}
+  m_Layer: 0
+  m_Name: ShieldDatabaseInstaller (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9156153538405197086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5565744338616269727}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2798036907571307412}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2017514562715281389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5565744338616269727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a405c8153934ea489a41607d7ddcd33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetImplementation: {fileID: 11400000, guid: c769d58ce2d662a4787c404c8005524f, type: 2}
 --- !u!1 &8611222380662551037
 GameObject:
   m_ObjectHideFlags: 0

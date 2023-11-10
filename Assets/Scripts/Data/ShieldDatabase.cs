@@ -10,7 +10,7 @@ namespace Data
         [SerializeField] private ShieldData[] _obstaclePrefabIdCompliances;
 
 
-        public ShieldData GetObstacleWithId(ShieldID shieldID)
+        public ShieldData GetItemWithId(ShieldID shieldID)
         {
             ShieldData databaseItemPath =
                 _obstaclePrefabIdCompliances.FirstOrDefault(compliance => compliance.ShieldID == shieldID);
@@ -39,7 +39,11 @@ namespace Data
         [SerializeField] private ShieldID _shieldID;
         [SerializeField] private string _shieldIconPath;
         [SerializeField] private string _shieldPrefabPath;
-        [SerializeField] private string _shieldPrice;
+        [SerializeField] private int _shieldPrice;
+
+        public string ShieldPrefabPath => _shieldPrefabPath;
+
+        public int ShieldPrice => _shieldPrice;
 
         public string ShieldIconPath
         {
@@ -52,5 +56,6 @@ namespace Data
             get => _shieldID;
             set => _shieldID = value;
         }
+
     }
 }
