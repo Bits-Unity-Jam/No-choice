@@ -17,53 +17,13 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 4708b088e9c217445827f032aa91107f
   m_SerializeEntries:
-  - m_GUID: 17acc426f5c901e4893120905f157236
-    m_Address: Assets/Prefabs/Shields/WreathShield Variant.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8dcc891a0ade5d34d9f60fc730aef1b1
-    m_Address: Assets/Prefabs/Shields/SnowflakeShield Variant.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a23e0d22538168a489463416f6e9a9a8
-    m_Address: Assets/Prefabs/Shields/SkullShield Variant.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ef2c1b947acde7e498c39fe7d373123a
-    m_Address: Assets/Prefabs/Shields/SmallPumpkinShield Variant.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2d0bcab978022fc4994e53d6a2c3747c
-    m_Address: Assets/Prefabs/Shields/BigPumpkinShield Variant.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5248ec01c2d46a745913ae27f6fc4dba
-    m_Address: Assets/Prefabs/Shields/KightShield Variant.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2f43527f9d0481d4db005915de72a571
-    m_Address: Assets/Prefabs/Shields/UkraineShield Variant.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 18225b14f09b86e4789d71b0c8994fbb
     m_Address: Assets/Prefabs/Shields/VikingShield Variant.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 73ead0160c80db543b3d91f7b72cb7ae
-    m_Address: Assets/Prefabs/Shields/BaseShield.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8ac135daea442734299a148b6394ff69
-    m_Address: Assets/Prefabs/Shields/EnderShield Variant.prefab
+  - m_GUID: 2f43527f9d0481d4db005915de72a571
+    m_Address: Assets/Prefabs/Shields/UkraineShield Variant.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

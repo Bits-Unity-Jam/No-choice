@@ -19,7 +19,7 @@ MonoBehaviour:
     _shieldPrice: 0
   - _shieldID: 2
     _shieldIconPath: Assets/Sprites/Shields/Ender.png
-    _shieldPrefabPath: Assets/Prefabs/Shields/EnderShield Variant.prefab
+    _shieldPrefabPath: 
     _shieldPrice: 70
   - _shieldID: 1
     _shieldIconPath: Assets/Sprites/Shields/Captain Ukraine.png
@@ -27,25 +27,25 @@ MonoBehaviour:
     _shieldPrice: 100
   - _shieldID: 3
     _shieldIconPath: Assets/Sprites/Shields/Knight.png
-    _shieldPrefabPath: Assets/Prefabs/Shields/KightShield Variant.prefab
+    _shieldPrefabPath: 
     _shieldPrice: 100
   - _shieldID: 4
     _shieldIconPath: Assets/Sprites/Shields/Pumpkin2.png
-    _shieldPrefabPath: Assets/Prefabs/Shields/SmallPumpkinShield Variant.prefab
+    _shieldPrefabPath: 
     _shieldPrice: 100
   - _shieldID: 6
     _shieldIconPath: Assets/Sprites/Shields/Skull.png
-    _shieldPrefabPath: Assets/Prefabs/Shields/SkullShield Variant.prefab
+    _shieldPrefabPath: 
     _shieldPrice: 100
   - _shieldID: 7
     _shieldIconPath: Assets/Sprites/Shields/Snowflake.png
-    _shieldPrefabPath: Assets/Prefabs/Shields/SnowflakeShield Variant.prefab
+    _shieldPrefabPath: 
     _shieldPrice: 100
   - _shieldID: 8
     _shieldIconPath: Assets/Sprites/Shields/Wreath.png
-    _shieldPrefabPath: Assets/Prefabs/Shields/WreathShield Variant.prefab
+    _shieldPrefabPath: 
     _shieldPrice: 100
   - _shieldID: 5
     _shieldIconPath: Assets/Sprites/Shields/Pumpkin.png
-    _shieldPrefabPath: Assets/Prefabs/Shields/BigPumpkinShield Variant.prefab
+    _shieldPrefabPath: 
     _shieldPrice: 150
