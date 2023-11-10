@@ -17,13 +17,48 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 4708b088e9c217445827f032aa91107f
   m_SerializeEntries:
-  - m_GUID: 18225b14f09b86e4789d71b0c8994fbb
-    m_Address: Assets/Prefabs/Shields/VikingShield Variant.prefab
+  - m_GUID: e37d7c3f4b255f945aab4c449b9a9aa6
+    m_Address: Assets/Prefabs/Shields/WreathShield Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 081c0901b6daa8c4f98eb72e65d3ee44
+    m_Address: Assets/Prefabs/Shields/KnightShield Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed9070cfb8190ff4ea6117b7496d413b
+    m_Address: Assets/Prefabs/Shields/SnowflakeShield Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d389939e8dfa996419713a61b7e72175
+    m_Address: Assets/Prefabs/Shields/EnderShield Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 095c9840f05d20640935b0a50995b10e
+    m_Address: Assets/Prefabs/Shields/BigPumpkinShield Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b2fc67a73a73a7a4e898393bd42285ad
+    m_Address: Assets/Prefabs/Shields/SkullShield Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 143dcf00be6af8343bdded4fa977ea19
+    m_Address: Assets/Prefabs/Shields/SmallPumpkinShield Variant.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2f43527f9d0481d4db005915de72a571
     m_Address: Assets/Prefabs/Shields/UkraineShield Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 18225b14f09b86e4789d71b0c8994fbb
+    m_Address: Assets/Prefabs/Shields/VikingShield Variant.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
