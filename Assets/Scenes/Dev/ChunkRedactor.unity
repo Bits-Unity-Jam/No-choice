@@ -1101,6 +1101,158 @@ MonoBehaviour:
   lastCreatedObjectIndex: 0
   hasToInjectAtCreation: 1
   _sourceObject: {fileID: 558243504}
+--- !u!1 &571891876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 571891880}
+  - component: {fileID: 571891877}
+  - component: {fileID: 571891879}
+  - component: {fileID: 571891878}
+  m_Layer: 0
+  m_Name: ObstaclePool(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &571891877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571891876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13b022759f5dc44292e649ee9f6ce64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolItemsCount: 10
+  _container: {fileID: 571891879}
+  lastCreatedObjectIndex: 0
+  hasToInjectAtCreation: 1
+  _sourceObject: {fileID: 571891878}
+--- !u!114 &571891878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571891876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53e5d418e9add04f974ff81ed277ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleId: 2
+--- !u!114 &571891879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571891876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf611ca6aac34c43b89969a9e909dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &571891880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571891876}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1484269789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &649400451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 649400455}
+  - component: {fileID: 649400452}
+  - component: {fileID: 649400454}
+  - component: {fileID: 649400453}
+  m_Layer: 0
+  m_Name: ObstaclePool(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &649400452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649400451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13b022759f5dc44292e649ee9f6ce64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolItemsCount: 10
+  _container: {fileID: 649400454}
+  lastCreatedObjectIndex: 0
+  hasToInjectAtCreation: 1
+  _sourceObject: {fileID: 649400453}
+--- !u!114 &649400453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649400451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53e5d418e9add04f974ff81ed277ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleId: 1
+--- !u!114 &649400454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649400451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf611ca6aac34c43b89969a9e909dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &649400455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649400451}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1484269789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &651860284
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,6 +1297,82 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 40486799}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &671735650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 671735654}
+  - component: {fileID: 671735651}
+  - component: {fileID: 671735653}
+  - component: {fileID: 671735652}
+  m_Layer: 0
+  m_Name: ObstaclePool(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &671735651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671735650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13b022759f5dc44292e649ee9f6ce64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolItemsCount: 10
+  _container: {fileID: 671735653}
+  lastCreatedObjectIndex: 0
+  hasToInjectAtCreation: 1
+  _sourceObject: {fileID: 671735652}
+--- !u!114 &671735652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671735650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53e5d418e9add04f974ff81ed277ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleId: 6
+--- !u!114 &671735653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671735650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf611ca6aac34c43b89969a9e909dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &671735654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671735650}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1484269789}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &881307829
 GameObject:
@@ -1434,6 +1662,158 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf4b7b7493f8cb1408b475eec4f7c892, type: 3}
+--- !u!1 &1149392281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1149392285}
+  - component: {fileID: 1149392282}
+  - component: {fileID: 1149392284}
+  - component: {fileID: 1149392283}
+  m_Layer: 0
+  m_Name: ObstaclePool(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1149392282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149392281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13b022759f5dc44292e649ee9f6ce64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolItemsCount: 10
+  _container: {fileID: 1149392284}
+  lastCreatedObjectIndex: 0
+  hasToInjectAtCreation: 1
+  _sourceObject: {fileID: 1149392283}
+--- !u!114 &1149392283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149392281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53e5d418e9add04f974ff81ed277ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleId: 3
+--- !u!114 &1149392284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149392281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf611ca6aac34c43b89969a9e909dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1149392285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149392281}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1484269789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1237292466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1237292470}
+  - component: {fileID: 1237292467}
+  - component: {fileID: 1237292469}
+  - component: {fileID: 1237292468}
+  m_Layer: 0
+  m_Name: ObstaclePool(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1237292467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237292466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13b022759f5dc44292e649ee9f6ce64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolItemsCount: 10
+  _container: {fileID: 1237292469}
+  lastCreatedObjectIndex: 0
+  hasToInjectAtCreation: 1
+  _sourceObject: {fileID: 1237292468}
+--- !u!114 &1237292468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237292466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53e5d418e9add04f974ff81ed277ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleId: 7
+--- !u!114 &1237292469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237292466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf611ca6aac34c43b89969a9e909dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1237292470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237292466}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1484269789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1239084564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1465,6 +1845,184 @@ Transform:
   m_Children:
   - {fileID: 1484269789}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1357247776
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2437650502264590954}
+    m_Modifications:
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 665.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 222.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000019073
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -175
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726434575760287099, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+      propertyPath: m_Name
+      value: Battery
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+--- !u!224 &1357247777 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1708945964005007433, guid: 6de00ba7fca88fd4a86ede4e5bfa8d0c, type: 3}
+  m_PrefabInstance: {fileID: 1357247776}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1471833014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1471833018}
+  - component: {fileID: 1471833015}
+  - component: {fileID: 1471833017}
+  - component: {fileID: 1471833016}
+  m_Layer: 0
+  m_Name: ObstaclePool(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1471833015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471833014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13b022759f5dc44292e649ee9f6ce64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolItemsCount: 10
+  _container: {fileID: 1471833017}
+  lastCreatedObjectIndex: 0
+  hasToInjectAtCreation: 1
+  _sourceObject: {fileID: 1471833016}
+--- !u!114 &1471833016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471833014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53e5d418e9add04f974ff81ed277ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleId: 5
+--- !u!114 &1471833017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471833014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf611ca6aac34c43b89969a9e909dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1471833018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471833014}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1484269789}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1484269787
 GameObject:
@@ -1498,16 +2056,24 @@ MonoBehaviour:
   _obstaclePoolPrefab: {fileID: 5434060840805098836, guid: 76d1d37fa961dde40a383137d3969cac, type: 3}
   _poolParentTransform: {fileID: 1484269789}
   _obstaclePoolIdCompliances:
-  - _obstaclePool: {fileID: 881307833}
+  - _obstaclePool: {fileID: 2108415316}
     _id: 0
-  - _obstaclePool: {fileID: 2280288}
+  - _obstaclePool: {fileID: 649400452}
     _id: 1
-  - _obstaclePool: {fileID: 558243506}
+  - _obstaclePool: {fileID: 571891877}
     _id: 2
-  - _obstaclePool: {fileID: 213648871}
+  - _obstaclePool: {fileID: 1149392282}
     _id: 3
-  - _obstaclePool: {fileID: 512053899}
+  - _obstaclePool: {fileID: 1898273803}
     _id: 4
+  - _obstaclePool: {fileID: 1471833015}
+    _id: 5
+  - _obstaclePool: {fileID: 671735651}
+    _id: 6
+  - _obstaclePool: {fileID: 1237292467}
+    _id: 7
+  - _obstaclePool: {fileID: 1604265176}
+    _id: 8
 --- !u!4 &1484269789
 Transform:
   m_ObjectHideFlags: 0
@@ -1526,6 +2092,15 @@ Transform:
   - {fileID: 558243503}
   - {fileID: 213648868}
   - {fileID: 512053896}
+  - {fileID: 2108415319}
+  - {fileID: 649400455}
+  - {fileID: 571891880}
+  - {fileID: 1149392285}
+  - {fileID: 1898273806}
+  - {fileID: 1471833018}
+  - {fileID: 671735654}
+  - {fileID: 1237292470}
+  - {fileID: 1604265179}
   m_Father: {fileID: 1239084565}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1507155483
@@ -1607,6 +2182,82 @@ MonoBehaviour:
   activatedDuration: 1
   deactivatedDuration: 0.5
   ease: 27
+--- !u!1 &1604265175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1604265179}
+  - component: {fileID: 1604265176}
+  - component: {fileID: 1604265178}
+  - component: {fileID: 1604265177}
+  m_Layer: 0
+  m_Name: ObstaclePool(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1604265176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604265175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13b022759f5dc44292e649ee9f6ce64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolItemsCount: 10
+  _container: {fileID: 1604265178}
+  lastCreatedObjectIndex: 0
+  hasToInjectAtCreation: 1
+  _sourceObject: {fileID: 1604265177}
+--- !u!114 &1604265177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604265175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53e5d418e9add04f974ff81ed277ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleId: 8
+--- !u!114 &1604265178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604265175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf611ca6aac34c43b89969a9e909dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1604265179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604265175}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1484269789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1673910623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,6 +2363,82 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 28428629}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1898273802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1898273806}
+  - component: {fileID: 1898273803}
+  - component: {fileID: 1898273805}
+  - component: {fileID: 1898273804}
+  m_Layer: 0
+  m_Name: ObstaclePool(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1898273803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898273802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13b022759f5dc44292e649ee9f6ce64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolItemsCount: 10
+  _container: {fileID: 1898273805}
+  lastCreatedObjectIndex: 0
+  hasToInjectAtCreation: 1
+  _sourceObject: {fileID: 1898273804}
+--- !u!114 &1898273804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898273802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53e5d418e9add04f974ff81ed277ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleId: 4
+--- !u!114 &1898273805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898273802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf611ca6aac34c43b89969a9e909dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1898273806
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898273802}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1484269789}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1939767714 stripped
 MonoBehaviour:
@@ -2033,6 +2760,82 @@ MonoBehaviour:
   activatedFade: 1
   deactivatedFade: 0
   ease: 27
+--- !u!1 &2108415315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2108415319}
+  - component: {fileID: 2108415316}
+  - component: {fileID: 2108415318}
+  - component: {fileID: 2108415317}
+  m_Layer: 0
+  m_Name: ObstaclePool(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2108415316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108415315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13b022759f5dc44292e649ee9f6ce64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolItemsCount: 10
+  _container: {fileID: 2108415318}
+  lastCreatedObjectIndex: 0
+  hasToInjectAtCreation: 1
+  _sourceObject: {fileID: 2108415317}
+--- !u!114 &2108415317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108415315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53e5d418e9add04f974ff81ed277ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleId: 0
+--- !u!114 &2108415318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108415315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf611ca6aac34c43b89969a9e909dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2108415319
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108415315}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1484269789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2127512527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2124,8 +2927,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1970012343787983462}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -15.25}
   m_SizeDelta: {x: 150, y: 14.5}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2152,7 +2955,7 @@ RectTransform:
   m_Father: {fileID: 796687886295803397}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2231,6 +3034,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e895e224c15fc04f9980bd503709653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  left: []
+  center: []
+  right: []
+  elementSlider: []
 --- !u!114 &2039846881557995962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2420,6 +3227,7 @@ RectTransform:
   m_Children:
   - {fileID: 5943622182977957770}
   - {fileID: 1541527046}
+  - {fileID: 1357247777}
   - {fileID: 8655113553958950500}
   - {fileID: 1217587083639678383}
   - {fileID: 7245392596612332112}
@@ -2590,7 +3398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &3708368052234813087
 MonoBehaviour:
   m_ObjectHideFlags: 0

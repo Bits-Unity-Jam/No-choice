@@ -23,7 +23,7 @@ namespace Game.Energy
         public float CurrentEnergy => _currentEnergy;
         public float CurrentPercentEnergy => _currentPercentEnergy;
 
-        public Action<float, float> EnergyChanged;
+        public Action<float> EnergyChanged;
         public Action<float, float> EnergyPercentChanged;
         
         void Awake()
@@ -51,7 +51,6 @@ namespace Game.Energy
 
         public void StartTimer()
         {
-
             StartCoroutine(UpdateTimer());
         }
 
@@ -79,11 +78,9 @@ namespace Game.Energy
                     _currentEnergy -= energyCount;
                 }
             }
-
+            
             _currentPercentEnergy = ((_currentEnergy / maxEnergy) * 100) / 100;
-
             EnergyPercentChanged?.Invoke(_currentPercentEnergy, timeToTick);
-            EnergyChanged?.Invoke(_currentEnergy, timeToTick);
         }
 
     }
