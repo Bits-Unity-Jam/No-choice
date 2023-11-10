@@ -17,8 +17,48 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 06219b5bb90e8964c96eaf707a0266cf
   m_SerializeEntries:
-  - m_GUID: b62eac74c2c493c45970cd927af91cee
-    m_Address: Assets/Sprites/Shield_resize.png
+  - m_GUID: 308f0c57d2b710245b537821d804847c
+    m_Address: Assets/Sprites/Shields/Captain Ukraine.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c28871f3a5935c846a33c7c676d00774
+    m_Address: Assets/Sprites/Shields/Ender.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac24e20257fd4f845b346513e141a642
+    m_Address: Assets/Sprites/Shields/Knight.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2bbdf16bbcb292846923cfb4d65b3481
+    m_Address: Assets/Sprites/Shields/Pumpkin.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c680ca2420f4b44dae8bba6ddfadd31
+    m_Address: Assets/Sprites/Shields/Pumpkin2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b5cf48b3f50da8549937fe10632f0ba4
+    m_Address: Assets/Sprites/Shields/Skull.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79db6bb0d3615e441a289efaa0b7b7b5
+    m_Address: Assets/Sprites/Shields/Snowflake.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f573309e89616f34e92fafc74d436d6d
+    m_Address: Assets/Sprites/Shields/Viking.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ac7977de3bcdef48b2bc51462f0cb3a
+    m_Address: Assets/Sprites/Shields/Wreath.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

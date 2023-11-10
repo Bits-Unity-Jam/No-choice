@@ -21,7 +21,16 @@ namespace Data
 
     public enum ShieldID
     {
-        defaultShield
+        Viking,
+        Ukraine,
+        Ender, 
+        Knight, 
+        PumpkinSmall, 
+        PumpkinBig, 
+        Skull, 
+        Snowflake, 
+        Wreath
+        
     }
     
     [Serializable]
@@ -29,6 +38,8 @@ namespace Data
     {
         [SerializeField] private ShieldID _shieldID;
         [SerializeField] private string _shieldIconPath;
+        [SerializeField] private string _shieldPrefabPath;
+        [SerializeField] private string _shieldPrice;
 
         public string ShieldIconPath
         {

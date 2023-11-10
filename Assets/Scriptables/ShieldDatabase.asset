@@ -14,4 +14,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _obstaclePrefabIdCompliances:
   - _shieldID: 0
-    _shieldIconPath: Assets/Sprites/Shield_resize.png
+    _shieldIconPath: Assets/Sprites/Shields/Viking.png
+    _shieldPrefabPath: 
+    _shieldPrice: 
+  - _shieldID: 1
+    _shieldIconPath: Assets/Sprites/Shields/Captain Ukraine.png
+    _shieldPrefabPath: 
+    _shieldPrice: 
+  - _shieldID: 2
+    _shieldIconPath: Assets/Sprites/Shields/Ender.png
+    _shieldPrefabPath: 
+    _shieldPrice: 
+  - _shieldID: 3
+    _shieldIconPath: Assets/Sprites/Shields/Knight.png
+    _shieldPrefabPath: 
+    _shieldPrice: 
+  - _shieldID: 4
+    _shieldIconPath: Assets/Sprites/Shields/Pumpkin2.png
+    _shieldPrefabPath: 
+    _shieldPrice: 
+  - _shieldID: 5
+    _shieldIconPath: Assets/Sprites/Shields/Pumpkin.png
+    _shieldPrefabPath: 
+    _shieldPrice: 
+  - _shieldID: 6
+    _shieldIconPath: Assets/Sprites/Shields/Skull.png
+    _shieldPrefabPath: 
+    _shieldPrice: 
+  - _shieldID: 7
+    _shieldIconPath: Assets/Sprites/Shields/Snowflake.png
+    _shieldPrefabPath: 
+    _shieldPrice: 
+  - _shieldID: 8
+    _shieldIconPath: Assets/Sprites/Shields/Wreath.png
+    _shieldPrefabPath: 
+    _shieldPrice: 
