@@ -1,5 +1,6 @@
 using System.Collections;
 using DG.Tweening;
+using Haptic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;

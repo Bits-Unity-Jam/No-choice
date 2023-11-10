@@ -40,11 +40,12 @@ namespace Audio
         private void Start()
         {
             slider.onValueChanged.AddListener(delegate { OnSliderValueChanged(); });
+            
             string savedSettings;
             SoundSettingsValue deserealized;
             try
             {
-                savedSettings = _storage.Load($"/Resources/SoundSettings/{exposedParam}");
+                savedSettings = _storage.Load($"/Resources/Settings/{exposedParam}");
                 deserealized = _serializer.Deserialize<SoundSettingsValue>(savedSettings);
             }
             catch (Exception e)
@@ -60,7 +61,7 @@ namespace Audio
         private void SaveSettings(float value)
         {
             var serialized = _serializer.Serialize(new SoundSettingsValue { value = value });
-            _storage.SaveAs(serialized, $"/Resources/SoundSettings/{exposedParam}");
+            _storage.SaveAs(serialized, $"/Resources/Settings/{exposedParam}");
         }
 
         public void OnSliderValueChanged()

@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Effects.Parallax;
 using Game.UI.Popups;
+using Haptic;
 using UnityEngine;
 
 public class GameStageController : MonoBehaviour
