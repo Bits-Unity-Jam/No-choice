@@ -27,6 +27,8 @@ namespace UI.Elements
         [Header("Button")] [SerializeField] private Button nextButton;
         [SerializeField] private Button previousButton;
         [SerializeField] private AudioSource sweepSound;
+        [SerializeField]
+        private int _defaultPoint = 1;
 
         public event Action<int> OnScrollItemChanged;
 
@@ -50,11 +52,8 @@ namespace UI.Elements
         private void Start()
         {
             InitializeScroll();
-            SetInteractable();
-            targetH = 0;
-            targetV = 0;
-            scroll.horizontalNormalizedPosition = 0;
-            scroll.verticalNormalizedPosition = 0;
+            
+            SetPoint(_defaultPoint);
         }
 
         private void InitializeScroll()
@@ -120,25 +119,8 @@ namespace UI.Elements
             return FindNearest(scroll.horizontalNormalizedPosition, _points);
         }
 
-        private void SetInteractable()
-        {
-            int currentPoint = FindNearest(scroll.horizontalNormalizedPosition, _points);
-            int targetPoint = Mathf.Clamp(currentPoint, 0, _points.Length - 1);
-
-            if (nextButton != null)
-            {
-                nextButton.interactable = _points[targetPoint] == 1 ? false : true;
-            }
-
-            if (previousButton != null)
-            {
-                previousButton.interactable = _points[targetPoint] != 0;
-            }
-        }
-
         private void Update()
         {
-            SetInteractable();
             if (LerpH)
             {
                 scroll.horizontalNormalizedPosition = Mathf.Lerp(scroll.horizontalNormalizedPosition, targetH,
