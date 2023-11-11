@@ -79,10 +79,10 @@ namespace Game.Energy
                 }
             }
             
-            _currentPercentEnergy = ((_currentEnergy / maxEnergy) * 100) / 100;
+            _currentPercentEnergy = _currentEnergy / maxEnergy;
+            
             EnergyPercentChanged?.Invoke(_currentPercentEnergy, timeToTick);
         }
-
     }
 }
 

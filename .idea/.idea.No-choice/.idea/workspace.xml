@@ -64,10 +64,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8748">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="9232">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="8748" />
+      <option name="pid" value="9232" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -91,6 +91,7 @@
       <workItem from="1698601407455" duration="4207000" />
       <workItem from="1699153652464" duration="1325000" />
       <workItem from="1699640154472" duration="7551000" />
+      <workItem from="1699701778064" duration="8749000" />
     </task>
     <servers />
   </component>
@@ -107,16 +108,29 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Energy/SliderEnergy.cs</url>
-          <line>78</line>
-          <properties documentPath="D:\Project\Unity\No-choice\Assets\Scripts\Energy\SliderEnergy.cs" initialLine="78" containingFunctionPresentation="method 'CheckImageSlider'">
+          <line>70</line>
+          <properties documentPath="D:\Project\Unity\No-choice\Assets\Scripts\Energy\SliderEnergy.cs" initialLine="70" containingFunctionPresentation="method 'ChangePercentImage'">
             <startOffsets>
-              <option value="2148" />
+              <option value="1905" />
             </startOffsets>
             <endOffsets>
-              <option value="2166" />
+              <option value="1946" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Energy/SliderEnergy.cs</url>
+          <line>63</line>
+          <properties documentPath="D:\Project\Unity\No-choice\Assets\Scripts\Energy\SliderEnergy.cs" initialLine="63" containingFunctionPresentation="method 'ChangePercentImage'">
+            <startOffsets>
+              <option value="1683" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1724" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -41,6 +41,9 @@ namespace Game.Energy.UI
             _timeToTick = timeToTick;
         }
 
+
+        #region Percent Energy
+
         private void CheckPercentImage(float percent)
         {
             int stepCount = (int)Math.Round(percent / 0.1, MidpointRounding.AwayFromZero);
@@ -70,7 +73,11 @@ namespace Game.Energy.UI
                 }
             }
         }
-        
+
+        #endregion
+
+        #region Color Energy
+
         private void CheckImageSlider(float percent)
         {
             int id = 0;
@@ -114,5 +121,8 @@ namespace Game.Energy.UI
                 elementSlider[i].sprite = center[id];
             }
         }
+
+        #endregion
+
     }
 }
