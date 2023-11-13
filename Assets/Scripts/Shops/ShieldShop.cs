@@ -75,12 +75,15 @@ namespace Shops
                 Destroy(tr);
             }
 
-            for (int i = 0; i < Enum.GetNames(typeof(ShieldID)).Length; i++)
+            var shieldTypescount = Enum.GetNames(typeof(ShieldID)).Length;
+            
+            for (int i = 0; i < shieldTypescount; i++)
             {
-                _createdSlots.Add(await CreateShieldSlot(
+                var created = await CreateShieldSlot(
                     _shieldDb.GetItemWithId((ShieldID)i),
-                    purchasedShieldData.purchasedShieldIds.Contains(i)
-                ));
+                    purchasedShieldData.purchasedShieldIds.Contains(i));
+                
+                _createdSlots.Add(created);
             }
 
             _createdSlots.ForEach(slot => slot.OnSlotButtonClick += HandleSlotClicked);
@@ -103,6 +106,10 @@ namespace Shops
             string loadedSaveData = _storage.Load(kPurchasedShieldsSavedataPath);
 
             PurchasedShieldsSaveData deserealized = _serializer.Deserialize<PurchasedShieldsSaveData>(loadedSaveData);
+            if (deserealized.purchasedShieldIds == default)
+            {
+                deserealized.purchasedShieldIds = Array.Empty<int>();
+            }
             return deserealized;
         }
 

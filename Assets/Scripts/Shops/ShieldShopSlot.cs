@@ -54,11 +54,11 @@ namespace Shops
         public async Task<ShieldShopSlot> Initialize(ShieldData itemWithId, bool isPurchased, bool canPurchase)
         {
             shieldData = itemWithId;
-            AsyncOperationHandle<Object> loadedObject = 
-                Addressables.LoadAssetAsync<Object>(itemWithId.ShieldIconPath);
+            AsyncOperationHandle<Sprite> loadedObject = 
+                Addressables.LoadAssetAsync<Sprite>(itemWithId.ShieldIconPath);
             await loadedObject.Task;
             
-            shieldIcon.sprite = loadedObject.Result.GetComponent<Sprite>();
+            shieldIcon.sprite = loadedObject.Result;
             
             if (itemWithId.ShieldPrice == 0)
             {

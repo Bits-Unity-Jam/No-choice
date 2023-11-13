@@ -35,7 +35,7 @@ namespace Assets.Scripts.Pools.BasePools
             _container ??= GetComponent<BaseContainer>();
         }
 
-        private void Start()
+        private void Awake()
         {
             InstantiateItems(poolItemsCount);
         }
@@ -76,6 +76,12 @@ namespace Assets.Scripts.Pools.BasePools
                 InstantiateItems(poolItemsCount);
             }
 
+            if ((_container.PullObject() == default))
+            {
+                return default;
+            }
+
+            
             return _container.PullObject().Pull();
         }
 
