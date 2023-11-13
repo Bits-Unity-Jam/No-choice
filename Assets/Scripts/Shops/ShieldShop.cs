@@ -20,7 +20,7 @@ namespace Shops
     {
         public int[] purchasedShieldIds;
     }
-    
+
     public class ShieldShop : MonoBehaviour
     {
         private ShieldDatabase _shieldDb;
@@ -31,16 +31,17 @@ namespace Shops
         [SerializeField] private GameObject shieldSlotPrefab;
         [SerializeField] private Transform shieldSlotParentTransform;
         [SerializeField] private Image selectedShieldImage;
-        
+
         private const string kPurchasedShieldsSavedataPath = "/Resources/SaveData/Shields/Purchased";
-        
+
         private ISerializer _serializer;
         private IStorage _storage;
         private CurrencyService _currencyService;
-        private List<ShieldShopSlot> _createdSlots = new ();
+        private List<ShieldShopSlot> _createdSlots = new();
 
         [Inject]
-        private void Construct(ShieldDatabase shieldDb, ISerializer serializer, IStorage storage, CurrencyService currencyService)
+        private void Construct(ShieldDatabase shieldDb, ISerializer serializer, IStorage storage,
+            CurrencyService currencyService)
         {
             _shieldDb = shieldDb;
             _serializer = serializer;
@@ -57,32 +58,36 @@ namespace Shops
         {
             shieldPriceText.text = shieldData.ShieldPrice.ToString();
             
-            AsyncOperationHandle<Object> loadedObject = 
-                Addressables.LoadAssetAsync<Object>(shieldData.ShieldIconPath);
+            {
+                shieldPriceText.transform.parent.parent.gameObject.SetActive(shieldData.ShieldPrice != 0);
+                buyButton.gameObject.SetActive(shieldData.ShieldPrice != 0);
+            }
+
+            AsyncOperationHandle<Sprite> loadedObject =
+                Addressables.LoadAssetAsync<Sprite>(shieldData.ShieldIconPath);
             await loadedObject.Task;
-            
-            selectedShieldImage.sprite = loadedObject.Result.GetComponent<Sprite>();
-            
+
+            selectedShieldImage.sprite = loadedObject.Result;
         }
-        
+
         private async void InitializeShop()
         {
-           _createdSlots = new();
+            _createdSlots = new();
             PurchasedShieldsSaveData purchasedShieldData = LoadPurchasedShieldData();
-            
+
             foreach (Transform tr in shieldSlotParentTransform)
             {
                 Destroy(tr);
             }
 
             var shieldTypescount = Enum.GetNames(typeof(ShieldID)).Length;
-            
+
             for (int i = 0; i < shieldTypescount; i++)
             {
                 var created = await CreateShieldSlot(
                     _shieldDb.GetItemWithId((ShieldID)i),
                     purchasedShieldData.purchasedShieldIds.Contains(i));
-                
+
                 _createdSlots.Add(created);
             }
 
@@ -98,9 +103,8 @@ namespace Shops
 
         private void HandlePurchase()
         {
-            
         }
-        
+
         private PurchasedShieldsSaveData LoadPurchasedShieldData()
         {
             string loadedSaveData = _storage.Load(kPurchasedShieldsSavedataPath);
@@ -110,6 +114,7 @@ namespace Shops
             {
                 deserealized.purchasedShieldIds = Array.Empty<int>();
             }
+
             return deserealized;
         }
 
@@ -117,7 +122,7 @@ namespace Shops
         {
             var created = Instantiate(shieldSlotPrefab, shieldSlotParentTransform);
             var slot = created.GetComponent<ShieldShopSlot>();
-            
+
             return await slot.Initialize(itemWithId, isPurchased, _currencyService.CanSpend(itemWithId.ShieldPrice));
         }
     }

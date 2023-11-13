@@ -35,7 +35,7 @@ namespace Shops
             set
             {
                 _isPurchased = value;
-                darkCoverImage.enabled = _isPurchased;
+                darkCoverImage.enabled = !_isPurchased;
             }
         }
 
@@ -63,6 +63,7 @@ namespace Shops
             if (itemWithId.ShieldPrice == 0)
             {
                 isPurchased = true;
+                priceText.gameObject.SetActive(false);
             }
 
             IsPurchased = isPurchased;
